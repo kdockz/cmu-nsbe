@@ -50,6 +50,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    paperclip (2.3.8)
+      activerecord
+      activesupport
     polyglot (0.3.1)
     populator (0.2.5)
     rack (1.2.1)
@@ -89,6 +92,7 @@ DEPENDENCIES
   factory_girl
   faker
   formtastic
+  paperclip
   populator
   rails (= 3.0.1)
   shoulda

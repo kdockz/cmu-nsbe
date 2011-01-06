@@ -1,0 +1,17 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Announcement" [shape=Mrecord, label="{Announcement|content :text\lstart_date :date\lend_date :date\lactive :boolean\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Event" [shape=Mrecord, label="{Event|name :string\llocation :string\lstart_date :date\lend_date :date\lstart_time :string\lend_time :string\lcapacity :integer\lstatus :integer\lactive :boolean\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Position" [shape=Mrecord, label="{Position|name :string\lemail :string\ldescription :text\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"PositionMember" [shape=Mrecord, label="{PositionMember|start_year :integer\lend_year :integer\lactive :boolean\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Registration" [shape=Mrecord, label="{Registration|created_at :datetime\lupdated_at :datetime\l}"]
+	"User" [shape=Mrecord, label="{User|login :string\lfirst_name :string\llast_name :string\lemail :string\lphone_number :string\lstring :string\lclass_level :integer\lmajor :integer\lactive :boolean\lcrypted_password :string\lsalt :string\lcreated_at :datetime\lupdated_at :datetime\lremember_token :string\lremember_token_expires_at :datetime\lphoto_file_name :string\lphoto_content_type :string\lphoto_file_size :integer\lphoto_updated_at :datetime\l}"]
+	"Zone" [shape=Mrecord, label="{Zone|name :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Event" -> "Registration" [arrowtail=crow, arrowhead=dot, dir=both]
+	"Event" -> "User" [arrowtail=crow, arrowhead=crow, dir=both]
+	"Position" -> "PositionMember" [arrowtail=crow, arrowhead=dot, dir=both]
+	"Position" -> "Zone" [arrowtail=odot, arrowhead=dot, dir=both]
+	"Position" -> "User" [arrowtail=crow, arrowhead=crow, dir=both]
+	"User" -> "PositionMember" [arrowtail=crow, arrowhead=dot, dir=both]
+	"User" -> "Registration" [arrowtail=crow, arrowhead=dot, dir=both]
+}

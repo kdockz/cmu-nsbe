@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #666666
 }
 #header {
-	width: 800px;
+	width: 900px;
 	padding-top: 25px;
 	display: block;
 	text-align: center;
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 #navigation ul {
 	position: relative;
 	float: left;
-	left: 50%;
+	left: 45%;
 	list-style: none;
 	text-decoration: none;
 }
@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	float: left;
 	right: 50%;
+	margin-right: auto;
 	padding-left: 25px;
 	padding-right: 25px;
 	font-family: Verdana;

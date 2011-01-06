@@ -5,7 +5,10 @@ class User < ActiveRecord::Base
   #Relationships 
   has_many :position_members
   has_many :positions, :through => :position_members
-
+  has_many :registrations
+  has_many :events, :through => :registrations
+  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
@@ -30,13 +33,17 @@ class User < ActiveRecord::Base
   :uniqueness => true,
   :format     => { :with => Authentication.email_regex, :message => Authentication.bad_email_message },
   :length     => { :within => 6..100 }
+  
+  validates_attachment_presence :photo                    
+  validates_attachment_size :photo, :less_than=>2.megabyte
+  validates_attachment_content_type :photo, :content_type=>['image/jpeg', 'image/png', 'image/gif']
 
 
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :first_name, :last_name, :password, :password_confirmation, :class, :major, :active
+  attr_accessible :login, :email, :first_name, :last_name, :password, :password_confirmation, :class_level, :major, :phone_number, :active, :photo
   
   MAJORS = [['Editorial', 0], ['Wiki', 1]] 
   CLASS_LEVEL = [['Freshman', 0], ['Sophomore', 1], ['Junior', 2], ['Senior', 3], ['Graduate']]
