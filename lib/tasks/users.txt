@@ -1,0 +1,14 @@
+Libby:Adams:eladams@andrew.cmu.edu:1:Chapter President
+Evan:Moss:ewm@andrew.cmu.edu:1:Membership Chair
+Alissa:Ebong:aie@andrew.cmu.edu:1:Conference Planning Co-Chair
+Shanel:Buchanan:sbuchana@andrew.cmu.edu:1:Chapter Treasurer
+Nicole:Ifill:nri@cmu.edu:1:Conference Planning Co-Chair
+Bryan:Lewis:bmlewis@andrew.cmu.edu:1:Co-Corporate Liason
+Ryan:Sanders:rjsander@andrew.cmu.edu:1:Co-Corporate Liason
+Kamal:Ibrahim:kibrahim@andrew.cmu.edu:1:Fundraising Chair
+DeVynne:Farquharson:dfarquha@andrew.cmu.edu:1:Programs Chair
+Brandon:Tyson:betyson@andrew.cmu.edu:1:Academic Excellence Chair
+Blake:Anderson:sbanders@andrew.cmu.edu:1:Pre-College Initiative Chair
+Samantha:Mitchual:smitchua@andrew.cmu.edu:1:Chapter Secretary
+Manny:Sampson:dsampson@andrew.cmu.edu:1:Publicity Chair
+Karl:Dockery:karl@cmu.edu:1:Telecommunications Chair

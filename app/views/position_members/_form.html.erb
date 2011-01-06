@@ -1,0 +1,33 @@
+<%= form_for(@position_member) do |f| %>
+  <% if @position_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position_member.errors.count, "error") %> prohibited this position_member from being saved:</h2>
+
+      <ul>
+      <% @position_member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :position_id %><br />
+    <%= f.text_field :position_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start_year %><br />
+    <%= f.text_field :start_year %>
+  </div>
+  <div class="field">
+    <%= f.label :end_year %><br />
+    <%= f.text_field :end_year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

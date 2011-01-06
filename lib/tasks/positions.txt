@@ -1,0 +1,16 @@
+Chapter President:Administrative Zone:cmu.nsbe.president@gmail.com
+Membership Chair:Membership Zone:cmu.nsbe.membership@gmail.com
+Senator 1:Membership Zone:cmu.nsbe.senators@gmail.com
+Senator 2:Membership Zone:cmu.nsbe.senators@gmail.com
+Chapter Treasurer:Finance Zone:cmu.nsbe.treasurer@gmail.com
+Conference Planning Co-Chair:Finance Zone:cmu.nsbe.cpc@gmail.com
+Co-Corporate Liason:Finance Zone:cmu.nsbe.cl@gmail.com
+Fundraising Chair:Finance Zone:cmu.nsbe.fundraising@gmail.com
+Programs Chair:Programs Zone:cmu.nsbe.programs@gmail.com
+Academic Excellence Chair:Programs Zone:cmu.nsbe.aex@gmail.com
+Activities Chair:Programs Zone:cmu.nsbe.activities@gmail.com
+Pre-College Initiative Chair:Programs Zone:cmu.nsbe.pci@gmail.com
+Freshman Representative:Programs Zone:cmu.nsbe.freshrep@gmail.com
+Chapter Secretary:Communication Zone:cmu.nsbe.secretary@gmail.com
+Publicity Chair:Communication Zone:cmu.nsbe.publicity@gmail.com
+Telecommunications Chair:Communication Zone:cmu.nsbe.telecoms@gmail.com

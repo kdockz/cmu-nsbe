@@ -1,0 +1,642 @@
+Script started on Mon Jan  3 06:26:14 2011
+[m[0;34m01/03/11[m @ [1;32m06:26AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mscript/generate
+bash: script/generate: No such file or directory
+[m[0;34m01/03/11[m @ [1;32m06:26AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mscript/generate[C[C[C[C[C[10Pclear~/tetris -l 9[C[C[C[C[C[8Pclearscript/generate[C[C[C[C[C[Kscript/generate[C[C[C[C[C[10Pclear~/tetris -l 9[C[C[C[C[Cls[Kclear~/tetris -l 9[C[C[C[C[C[8Pclear[3Pls``ls[2Psslscd PUCS_F10/[C[C[C[C[Cls[Kcd PUCS_F10/[C[C[C[C[Cls[Kss``ls[2Plsclear~/tetris -l 9[C[C[C[C[C[8Pclear[3Pls~/tetris -l 9[C[C[C[C[C[8Pclearscript/generate[C[C[C[C[C[K
+[m[0;34m01/03/11[m @ [1;32m06:27AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[m
+[m[0;34m01/03/11[m @ [1;32m06:27AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[m
+[m[0;34m01/03/11[m @ [1;32m06:27AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m06:27AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclearscript/generate[C[C[C[C[C[10Pclear~/tetris -l 9[C[C[C[C[Cls[Kclear~/tetris -l 9[C[C[C[C[C[8Pclear[3Pls``ls[2Psslscd PUCS_F10/[C[C[C[C[Cls[Kcd pucs_f10[4PClas[C[C[C[C[Cls[Kcd Projects/[C[C[C[C[C[C[7Plear[3Plsssbundle install[C[C[C[C[Cls[Ksslsgit pull origin master[C[C[C[C[C[C[C[C[Ccheckout -- app/controllers/home_controller.rb [C[C[C[C[C[C[Kit pull origin master[C[C[C[C[C[8Pheroku console[3Plogs[C[C[C[C[C[6Pclear[3Plsclearheroku logsconsole[C[C[C[C[Cgit pull origin master[C[C[C[C[C[C[Kit checkout -- app/controllers/home_controller.rb [C[C[C[C[C[C[C[C[C[29Ppull origin master[C[C[C[C[Cls[Ksslsbundle install[C[C[C[C[Css[Klscleard Projects/[C[C[C[C[Cls[Kcd Claspucs_f10[C[C[C[C[Cls[K[K[K
+[m[0;34m01/03/11[m @ [1;32m06:27AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mscript/generate scaffold Event name:string location:string start_date:date end_date:date start_time:string end_time:string user_id:integer status:integer active:boolean
+bash: script/generate: No such file or directory
+[m[0;34m01/03/11[m @ [1;32m06:29AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mscript/generate scaffold Event name:string location:string start_date:date end_date:date start_time:string end_time:string user_id:integer status:integer active:boolean[1P[4hl[4l[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[4hr[4l[4ha[4l[4hi[4l[4hl[4l[C[4hs[4l[4h [4l[4hj[4l
+^C/Library/Ruby/Site/1.8/rubygems/version.rb:215:in `hash': Interrupt
+	from /Library/Ruby/Site/1.8/rubygems/requirement.rb:109:in `hash'
+	from /Library/Ruby/Site/1.8/rubygems/specification.rb:675:in `hash'
+	from /Library/Ruby/Site/1.8/rubygems/source_index.rb:95:in `inject'
+	from /Library/Ruby/Site/1.8/rubygems/specification.rb:674:in `each'
+	from /Library/Ruby/Site/1.8/rubygems/specification.rb:674:in `inject'
+	from /Library/Ruby/Site/1.8/rubygems/specification.rb:674:in `hash'
+	from /Library/Ruby/Gems/1.8/gems/bundler-1.0.3/lib/bundler/spec_set.rb:107:in `uniq'
+	from /Library/Ruby/Gems/1.8/gems/bundler-1.0.3/lib/bundler/spec_set.rb:107:in `sorted'
+	from /Library/Ruby/Gems/1.8/gems/bundler-1.0.3/lib/bundler/spec_set.rb:12:in `each'
+	from /Library/Ruby/Gems/1.8/gems/bundler-1.0.3/lib/bundler/shared_helpers.rb:76:in `map'
+	from /Library/Ruby/Gems/1.8/gems/bundler-1.0.3/lib/bundler/shared_helpers.rb:76:in `cripple_rubygems'
+	from /Library/Ruby/Gems/1.8/gems/bundler-1.0.3/lib/bundler/runtime.rb:14:in `setup'
+	from /Library/Ruby/Gems/1.8/gems/bundler-1.0.3/lib/bundler.rb:100:in `setup'
+	from /Users/kdockz/Projects/nsbe/config/boot.rb:8
+	from script/rails:5:in `require'
+	from script/rails:5
+
+[m[0;34m01/03/11[m @ [1;32m06:29AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails jscaffold Event name:string location:string start_date:date end_date:date start_time:string end_time:string user_id:integer status:integer active:boolean[1P[4hg[4l[4h [4l
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20110103113008_create_events.rb
+[1m[32m      create[0m    app/models/event.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/event_test.rb
+[1m[32m      create[0m      test/fixtures/events.yml
+[1m[32m       route[0m  resources :events
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/events_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/events
+[1m[32m      create[0m      app/views/events/index.html.erb
+[1m[32m      create[0m      app/views/events/edit.html.erb
+[1m[32m      create[0m      app/views/events/show.html.erb
+[1m[32m      create[0m      app/views/events/new.html.erb
+[1m[32m      create[0m      app/views/events/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/events_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/events_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/events_helper_test.rb
+[1m[37m      invoke[0m  stylesheets
+[1m[32m      create[0m    public/stylesheets/scaffold.css
+[m[0;34m01/03/11[m @ [1;32m06:30AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails plugin install git://github.com/technoweenie/restful-authentication.git
+Initialized empty Git repository in /Users/kdockz/Projects/nsbe/vendor/plugins/restful-authentication/.git/
+remote: Counting objects: 102, done.[K
+remote: Compressing objects:   1% (1/82)   [Kremote: Compressing objects:   2% (2/82)   [Kremote: Compressing objects:   3% (3/82)   [Kremote: Compressing objects:   4% (4/82)   [Kremote: Compressing objects:   6% (5/82)   [Kremote: Compressing objects:   7% (6/82)   [Kremote: Compressing objects:   8% (7/82)   [Kremote: Compressing objects:   9% (8/82)   [Kremote: Compressing objects:  10% (9/82)   [Kremote: Compressing objects:  12% (10/82)   [Kremote: Compressing objects:  13% (11/82)   [Kremote: Compressing objects:  14% (12/82)   [Kremote: Compressing objects:  15% (13/82)   [Kremote: Compressing objects:  17% (14/82)   [Kremote: Compressing objects:  18% (15/82)   [Kremote: Compressing objects:  19% (16/82)   [Kremote: Compressing objects:  20% (17/82)   [Kremote: Compressing objects:  21% (18/82)   [Kremote: Compressing objects:  23% (19/82)   [Kremote: Compressing objects:  24% (20/82)   [Kremote: Compressing objects:  25% (21/82)   [Kremote: Compressing objects:  26% (22/82)   [Kremote: Compressing objects:  28% (23/82)   [Kremote: Compressing objects:  29% (24/82)   [Kremote: Compressing objects:  30% (25/82)   [Kremote: Compressing objects:  31% (26/82)   [Kremote: Compressing objects:  32% (27/82)   [Kremote: Compressing objects:  34% (28/82)   [Kremote: Compressing objects:  35% (29/82)   [Kremote: Compressing objects:  36% (30/82)   [Kremote: Compressing objects:  37% (31/82)   [Kremote: Compressing objects:  39% (32/82)   [Kremote: Compressing objects:  40% (33/82)   [Kremote: Compressing objects:  41% (34/82)   [Kremote: Compressing objects:  42% (35/82)   [Kremote: Compressing objects:  43% (36/82)   [Kremote: Compressing objects:  45% (37/82)   [Kremote: Compressing objects:  46% (38/82)   [Kremote: Compressing objects:  47% (39/82)   [Kremote: Compressing objects:  48% (40/82)   [Kremote: Compressing objects:  50% (41/82)   [Kremote: Compressing objects:  51% (42/82)   [Kremote: Compressing objects:  52% (43/82)   [Kremote: Compressing objects:  53% (44/82)   [Kremote: Compressing objects:  54% (45/82)   [Kremote: Compressing objects:  56% (46/82)   [Kremote: Compressing objects:  57% (47/82)   [Kremote: Compressing objects:  58% (48/82)   [Kremote: Compressing objects:  59% (49/82)   [Kremote: Compressing objects:  60% (50/82)   [Kremote: Compressing objects:  62% (51/82)   [Kremote: Compressing objects:  63% (52/82)   [Kremote: Compressing objects:  64% (53/82)   [Kremote: Compressing objects:  65% (54/82)   [Kremote: Compressing objects:  67% (55/82)   [Kremote: Compressing objects:  68% (56/82)   [Kremote: Compressing objects:  69% (57/82)   [Kremote: Compressing objects:  70% (58/82)   [Kremote: Compressing objects:  71% (59/82)   [Kremote: Compressing objects:  73% (60/82)   [Kremote: Compressing objects:  74% (61/82)   [Kremote: Compressing objects:  75% (62/82)   [Kremote: Compressing objects:  76% (63/82)   [Kremote: Compressing objects:  78% (64/82)   [Kremote: Compressing objects:  79% (65/82)   [Kremote: Compressing objects:  80% (66/82)   [Kremote: Compressing objects:  81% (67/82)   [Kremote: Compressing objects:  82% (68/82)   [Kremote: Compressing objects:  84% (69/82)   [Kremote: Compressing objects:  85% (70/82)   [Kremote: Compressing objects:  86% (71/82)   [Kremote: Compressing objects:  87% (72/82)   [Kremote: Compressing objects:  89% (73/82)   [Kremote: Compressing objects:  90% (74/82)   [Kremote: Compressing objects:  91% (75/82)   [Kremote: Compressing objects:  92% (76/82)   [Kremote: Compressing objects:  93% (77/82)   [Kremote: Compressing objects:  95% (78/82)   [Kremote: Compressing objects:  96% (79/82)   [Kremote: Compressing objects:  97% (80/82)   [Kremote: Compressing objects:  98% (81/82)   [Kremote: Compressing objects: 100% (82/82)   [Kremote: Compressing objects: 100% (82/82), done.[K
+Receiving objects:   0% (1/102)   Receiving objects:   1% (2/102)   Receiving objects:   2% (3/102)   Receiving objects:   3% (4/102)   Receiving objects:   4% (5/102)   Receiving objects:   5% (6/102)   Receiving objects:   6% (7/102)   Receiving objects:   7% (8/102)   Receiving objects:   8% (9/102)   Receiving objects:   9% (10/102)   Receiving objects:  10% (11/102)   Receiving objects:  11% (12/102)   Receiving objects:  12% (13/102)   Receiving objects:  13% (14/102)   Receiving objects:  14% (15/102)   Receiving objects:  15% (16/102)   Receiving objects:  16% (17/102)   Receiving objects:  17% (18/102)   Receiving objects:  18% (19/102)   Receiving objects:  19% (20/102)   Receiving objects:  20% (21/102)   Receiving objects:  21% (22/102)   Receiving objects:  22% (23/102)   Receiving objects:  23% (24/102)   Receiving objects:  24% (25/102)   Receiving objects:  25% (26/102)   Receiving objects:  26% (27/102)   Receiving objects:  27% (28/102)   Receiving objects:  28% (29/102)   Receiving objects:  29% (30/102)   Receiving objects:  30% (31/102)   Receiving objects:  31% (32/102)   Receiving objects:  32% (33/102)   Receiving objects:  33% (34/102)   Receiving objects:  34% (35/102)   Receiving objects:  35% (36/102)   Receiving objects:  36% (37/102)   Receiving objects:  37% (38/102)   Receiving objects:  38% (39/102)   Receiving objects:  39% (40/102)   Receiving objects:  40% (41/102)   Receiving objects:  41% (42/102)   Receiving objects:  42% (43/102)   Receiving objects:  43% (44/102)   Receiving objects:  44% (45/102)   Receiving objects:  45% (46/102)   Receiving objects:  46% (47/102)   Receiving objects:  47% (48/102)   Receiving objects:  48% (49/102)   Receiving objects:  49% (50/102)   Receiving objects:  50% (51/102)   Receiving objects:  51% (53/102)   Receiving objects:  52% (54/102)   Receiving objects:  53% (55/102)   Receiving objects:  54% (56/102)   Receiving objects:  55% (57/102)   Receiving objects:  56% (58/102)   Receiving objects:  57% (59/102)   Receiving objects:  58% (60/102)   Receiving objects:  59% (61/102)   Receiving objects:  60% (62/102)   Receiving objects:  61% (63/102)   Receiving objects:  62% (64/102)   Receiving objects:  63% (65/102)   Receiving objects:  64% (66/102)   Receiving objects:  65% (67/102)   Receiving objects:  66% (68/102)   Receiving objects:  67% (69/102)   Receiving objects:  68% (70/102)   Receiving objects:  69% (71/102)   Receiving objects:  70% (72/102)   Receiving objects:  71% (73/102)   Receiving objects:  72% (74/102)   Receiving objects:  73% (75/102)   Receiving objects:  74% (76/102)   Receiving objects:  75% (77/102)   Receiving objects:  76% (78/102)   Receiving objects:  77% (79/102)   Receiving objects:  78% (80/102)   Receiving objects:  79% (81/102)   Receiving objects:  80% (82/102)   Receiving objects:  81% (83/102)   Receiving objects:  81% (83/102), 188.00 KiB | 158 KiB/s   remote: Total 102 (delta 15), reused 38 (delta 8)[K
+Receiving objects:  82% (84/102), 244.00 KiB | 139 KiB/s   Receiving objects:  83% (85/102), 244.00 KiB | 139 KiB/s   Receiving objects:  84% (86/102), 244.00 KiB | 139 KiB/s   Receiving objects:  85% (87/102), 244.00 KiB | 139 KiB/s   Receiving objects:  86% (88/102), 244.00 KiB | 139 KiB/s   Receiving objects:  87% (89/102), 244.00 KiB | 139 KiB/s   Receiving objects:  88% (90/102), 244.00 KiB | 139 KiB/s   Receiving objects:  89% (91/102), 244.00 KiB | 139 KiB/s   Receiving objects:  90% (92/102), 244.00 KiB | 139 KiB/s   Receiving objects:  91% (93/102), 244.00 KiB | 139 KiB/s   Receiving objects:  92% (94/102), 244.00 KiB | 139 KiB/s   Receiving objects:  93% (95/102), 244.00 KiB | 139 KiB/s   Receiving objects:  94% (96/102), 244.00 KiB | 139 KiB/s   Receiving objects:  95% (97/102), 244.00 KiB | 139 KiB/s   Receiving objects:  96% (98/102), 244.00 KiB | 139 KiB/s   Receiving objects:  97% (99/102), 244.00 KiB | 139 KiB/s   Receiving objects:  98% (100/102), 244.00 KiB | 139 KiB/s   Receiving objects:  99% (101/102), 244.00 KiB | 139 KiB/s   Receiving objects: 100% (102/102), 244.00 KiB | 139 KiB/s   Receiving objects: 100% (102/102), 250.51 KiB | 139 KiB/s, done.
+Resolving deltas:   0% (0/15)   Resolving deltas:  13% (2/15)   Resolving deltas:  26% (4/15)   Resolving deltas:  40% (6/15)   Resolving deltas:  46% (7/15)   Resolving deltas:  53% (8/15)   Resolving deltas:  60% (9/15)   Resolving deltas:  66% (10/15)   Resolving deltas:  73% (11/15)   Resolving deltas:  80% (12/15)   Resolving deltas:  86% (13/15)   Resolving deltas:  93% (14/15)   Resolving deltas: 100% (15/15)   Resolving deltas: 100% (15/15), done.
+From git://github.com/technoweenie/restful-authentication
+ * branch            HEAD       -> FETCH_HEAD
+[m[0;34m01/03/11[m @ [1;32m06:47AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m06:50AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear[K[K[K[K[Kss
+bash: ss: command not found
+[m[0;34m01/03/11[m @ [1;32m06:50AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails s
+=> Booting WEBrick
+=> Rails 3.0.1 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-01-03 06:50:57] INFO  WEBrick 1.3.1
+[2011-01-03 06:50:57] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-01-03 06:50:58] INFO  WEBrick::HTTPServer#start: pid=7209 port=3000
+
+
+Started GET "/events" for 127.0.0.1 at Mon Jan 03 07:01:39 -0500 2011
+  Processing by EventsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+SQLite3::SQLException: no such table: events: SELECT     "events".* FROM       "events"
+Completed   in 65ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: events: SELECT     "events".* FROM       "events"):
+  app/controllers/events_controller.rb:5:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+^C[2011-01-03 07:01:47] INFO  going to shutdown ...
+[2011-01-03 07:01:47] INFO  WEBrick::HTTPServer#start done.
+Exiting
+[m[0;34m01/03/11[m @ [1;32m07:01AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:migrate
+(in /Users/kdockz/Projects/nsbe)
+DEPRECATION WARNING: Rake tasks in /Users/kdockz/Projects/nsbe/vendor/plugins/restful-authentication/tasks/auth.rake are deprecated. Use lib/tasks instead. (called from /Users/kdockz/Projects/nsbe/Rakefile:7)
+==  CreateEvents: migrating ===================================================
+-- create_table(:events)
+   -> 0.0021s
+==  CreateEvents: migrated (0.0022s) ==========================================
+
+[m[0;34m01/03/11[m @ [1;32m07:01AM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mss[K[Krails s
+=> Booting WEBrick
+=> Rails 3.0.1 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-01-03 07:02:17] INFO  WEBrick 1.3.1
+[2011-01-03 07:02:17] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-01-03 07:02:17] INFO  WEBrick::HTTPServer#start: pid=7241 port=3000
+
+
+Started GET "/events" for 127.0.0.1 at Mon Jan 03 07:02:19 -0500 2011
+  Processing by EventsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+Rendered events/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 43.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Jan 03 07:08:19 -0500 2011
+
+ActionController::RoutingError (No route matches "/signup"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Jan 03 07:09:44 -0500 2011
+
+SyntaxError (/Users/kdockz/Projects/nsbe/config/routes.rb:4: syntax error, unexpected $undefined, expecting kEND
+/Users/kdockz/Projects/nsbe/config/routes.rb:5: syntax error, unexpected $undefined, expecting kEND
+/Users/kdockz/Projects/nsbe/config/routes.rb:6: syntax error, unexpected $undefined, expecting kEND):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Jan 03 07:10:01 -0500 2011
+
+NameError (undefined local variable or method `map' for #<ActionDispatch::Routing::Mapper:0x1040f5d20>):
+  config/routes.rb:4
+  config/routes.rb:1
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Jan 03 07:14:16 -0500 2011
+
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (75.5ms)
+[2011-01-03 16:48:01] ERROR Errno::EINVAL: Invalid argument
+	/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:91:in `select'
+raios     ^C[2011-01-03 16:53:06] INFO  going to shutdown ...
+[2011-01-03 16:53:06] INFO  WEBrick::HTTPServer#start done.
+Exiting
+[m[0;34m01/03/11[m @ [1;32m04:53PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m04:53PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m04:53PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails
+Usage: rails COMMAND [ARGS]
+
+The most common rails commands are:
+ generate    Generate new code (short-cut alias: "g")
+ console     Start the Rails console (short-cut alias: "c")
+ server      Start the Rails server (short-cut alias: "s")
+ dbconsole   Start a console for the database specified in config/database.yml
+             (short-cut alias: "db")
+ new         Create a new Rails application. "rails new my_app" creates a
+             new application called MyApp in "./my_app"
+
+In addition to those, there are:
+ application  Generate the Rails application code
+ destroy      Undo code generated with "generate"
+ benchmarker  See how fast a piece of code runs
+ profiler     Get profile information from a piece of code
+ plugin       Install a plugin
+ runner       Run a piece of code in the application environment
+
+All commands can be run with -h for more information.
+[m[0;34m01/03/11[m @ [1;32m04:53PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[m
+[m[0;34m01/03/11[m @ [1;32m04:53PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m04:56PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mgem list
+
+*** LOCAL GEMS ***
+
+abstract (1.0.0)
+actionmailer (3.0.1, 3.0.0, 2.3.8, 2.3.5, 2.3.2, 2.2.2, 1.3.6)
+actionpack (3.0.1, 3.0.0, 2.3.8, 2.3.5, 2.3.2, 2.2.2, 1.13.6)
+actionwebservice (1.2.6)
+activemodel (3.0.1, 3.0.0)
+activerecord (3.0.1, 3.0.0, 2.3.8, 2.3.5, 2.3.2, 2.2.2, 1.15.6)
+activeresource (3.0.1, 3.0.0, 2.3.8, 2.3.5, 2.3.2, 2.2.2)
+activesupport (3.0.1, 3.0.0, 2.3.8, 2.3.5, 2.3.2, 2.2.2, 1.4.4)
+acts_as_ferret (0.5.2, 0.5.1, 0.4.4, 0.4.3)
+arel (2.0.1, 1.0.1)
+arrayfields (4.7.4)
+authlogic (2.1.6, 2.1.3)
+builder (2.1.2)
+bundler (1.0.3, 1.0.0)
+cancan (1.4.0, 1.3.4, 1.1.1, 1.0.2)
+capistrano (2.5.19, 2.5.16, 2.5.14, 2.5.5, 2.5.2)
+cgi_multipart_eof_fix (2.5.0)
+cheat (1.3.0, 1.2.1)
+chronic (0.3.0, 0.2.3)
+configuration (1.1.0)
+daemons (1.1.0, 1.0.10)
+dnssd (1.4, 1.3.1, 0.7.1, 0.6.0)
+erubis (2.6.6)
+factory_girl (1.3.2, 1.2.4, 1.2.3)
+faker (0.3.1)
+fastthread (1.0.7, 1.0.1)
+fattr (2.1.0)
+fcgi (0.8.8, 0.8.7)
+ferret (0.11.6)
+formtastic (1.1.0, 1.0.1, 0.9.10, 0.9.7)
+gem_plugin (0.2.3)
+gemcutter (0.6.1, 0.3.0)
+gravtastic (3.1.0, 2.2.0)
+heroku (1.11.0, 1.9.14, 1.8.0)
+highline (1.6.1, 1.5.2, 1.5.0)
+hirb (0.3.4, 0.3.3, 0.2.10)
+hoe (2.6.2, 2.6.1, 2.5.0, 1.11.0)
+hpricot (0.8.2, 0.7, 0.6.164)
+i18n (0.4.2, 0.4.1, 0.3.7)
+jk-ferret (0.11.8.2)
+jrails (0.6.0)
+json (1.4.6, 1.2.0)
+json_pure (1.4.6, 1.4.3, 1.2.0)
+launchy (0.3.7, 0.3.5)
+libxml-ruby (1.1.4, 1.1.3, 1.1.2)
+mail (2.2.9, 2.2.5)
+main (4.2.0)
+map_by_method (0.8.3)
+mime-types (1.16)
+mislav-will_paginate (2.3.11)
+mongrel (1.1.5)
+needle (1.3.0)
+net-scp (1.0.4, 1.0.3, 1.0.2, 1.0.1)
+net-sftp (2.0.5, 2.0.4, 2.0.2, 2.0.1, 1.1.1)
+net-ssh (2.0.23, 2.0.20, 2.0.19, 2.0.11, 2.0.4, 1.1.4)
+net-ssh-gateway (1.0.1, 1.0.0)
+nokogiri (1.4.3.1, 1.4.1)
+open4 (1.0.1)
+password (1.3)
+polyglot (0.3.1)
+populator (0.2.5)
+rack (1.2.1, 1.1.0, 1.0.1)
+rack-mount (0.6.13)
+rack-test (0.5.6, 0.5.4, 0.5.3)
+railroad (0.5.0)
+rails (3.0.1, 3.0.0, 2.3.8, 2.3.5, 2.3.2, 2.2.2, 1.2.6)
+rails3-jquery-autocomplete (0.5.1)
+railties (3.0.1, 3.0.0)
+rake (0.8.7, 0.8.4, 0.8.3)
+RedCloth (4.2.3, 4.2.2, 4.1.9, 4.1.1)
+rest-client (1.6.1, 1.4.2, 1.3.1, 1.3.0, 1.2.0)
+ruby-openid (2.1.8, 2.1.7, 2.1.4, 2.1.2)
+ruby-yadis (0.3.4)
+rubyforge (2.0.4, 2.0.3, 1.0.3)
+rubygems-update (1.3.7, 1.3.5)
+rubynode (0.1.5)
+searchlogic (2.4.27, 2.4.25, 2.4.19, 2.4.12)
+sequel (3.17.0, 3.16.0, 3.15.0, 3.13.0, 3.10.0, 3.0.0)
+shoulda (2.11.3, 2.10.3)
+sinatra (1.1.0, 1.0, 0.9.2)
+sqlite3-ruby (1.3.2, 1.3.1, 1.2.5, 1.2.4)
+taps (0.3.14, 0.3.13, 0.3.11, 0.3.4, 0.2.25)
+termios (0.9.4)
+thor (0.14.3, 0.14.0, 0.13.2, 0.13.1, 0.13.0, 0.9.9)
+tilt (1.1)
+treetop (1.4.8)
+tzinfo (0.3.23)
+webrat (0.7.2, 0.7.1, 0.7.0)
+what_methods (1.0.1)
+will_paginate (2.3.15, 2.3.14, 2.3.12)
+wirble (0.1.3)
+wycats-textmate (0.9.2)
+xmpp4r (0.5, 0.4)
+[m[0;34m01/03/11[m @ [1;32m04:56PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mri[Kails g auteh[K[Kheni[Kticated users [K[K sessions
+Could not find generator authenticated.
+[m[0;34m01/03/11[m @ [1;32m04:58PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mcd vendor//p[K[Kplugins/
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe/vendor/plugins[m][1;30m
+>>[mls
+restful-authentication
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe/vendor/plugins[m][1;30m
+>>[mrm restful-authentication/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K-rf restful-authentication/
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe/vendor/plugins[m][1;30m
+>>[mls
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe/vendor/plugins[m][1;30m
+>>[mcd ...[K[K.
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe/vendor[m][1;30m
+>>[mcd ..
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m05:02PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mlsclear[3Plscd ..[3Plsrm -rf restful-authentication/[C[C[C[C[Cls[Kcd vendor/plugins/[C[C[C[C[Cls[Krails g authenticated user sessions[C[C[C[C[Cgem list[K[C[C[C[C[Crails g authenticated user sessions[C[C[C[C[Cgem list[K[C[C[C[C[Cls[Krailsclear[3Plsrails ske db:migrate[C[C[C[C[C[C[C[8Pils s[C[C[C[C[Css[Klsrails plugin install git://github.com/technoweenie/restful-authentication.git[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit://github.com/Satish/restful-authentication.git
+Initialized empty Git repository in /Users/kdockz/Projects/nsbe/vendor/plugins/restful-authentication/.git/
+remote: Counting objects: 90, done.[K
+remote: Compressing objects:   1% (1/78)   [Kremote: Compressing objects:   2% (2/78)   [Kremote: Compressing objects:   3% (3/78)   [Kremote: Compressing objects:   5% (4/78)   [Kremote: Compressing objects:   6% (5/78)   [Kremote: Compressing objects:   7% (6/78)   [Kremote: Compressing objects:   8% (7/78)   [Kremote: Compressing objects:  10% (8/78)   [Kremote: Compressing objects:  11% (9/78)   [Kremote: Compressing objects:  12% (10/78)   [Kremote: Compressing objects:  14% (11/78)   [Kremote: Compressing objects:  15% (12/78)   [Kremote: Compressing objects:  16% (13/78)   [Kremote: Compressing objects:  17% (14/78)   [Kremote: Compressing objects:  19% (15/78)   [Kremote: Compressing objects:  20% (16/78)   [Kremote: Compressing objects:  21% (17/78)   [Kremote: Compressing objects:  23% (18/78)   [Kremote: Compressing objects:  24% (19/78)   [Kremote: Compressing objects:  25% (20/78)   [Kremote: Compressing objects:  26% (21/78)   [Kremote: Compressing objects:  28% (22/78)   [Kremote: Compressing objects:  29% (23/78)   [Kremote: Compressing objects:  30% (24/78)   [Kremote: Compressing objects:  32% (25/78)   [Kremote: Compressing objects:  33% (26/78)   [Kremote: Compressing objects:  34% (27/78)   [Kremote: Compressing objects:  35% (28/78)   [Kremote: Compressing objects:  37% (29/78)   [Kremote: Compressing objects:  38% (30/78)   [Kremote: Compressing objects:  39% (31/78)   [Kremote: Compressing objects:  41% (32/78)   [Kremote: Compressing objects:  42% (33/78)   [Kremote: Compressing objects:  43% (34/78)   [Kremote: Compressing objects:  44% (35/78)   [Kremote: Compressing objects:  46% (36/78)   [Kremote: Compressing objects:  47% (37/78)   [Kremote: Compressing objects:  48% (38/78)   [Kremote: Compressing objects:  50% (39/78)   [Kremote: Compressing objects:  51% (40/78)   [Kremote: Compressing objects:  52% (41/78)   [Kremote: Compressing objects:  53% (42/78)   [Kremote: Compressing objects:  55% (43/78)   [Kremote: Compressing objects:  56% (44/78)   [Kremote: Compressing objects:  57% (45/78)   [Kremote: Compressing objects:  58% (46/78)   [Kremote: Compressing objects:  60% (47/78)   [Kremote: Compressing objects:  61% (48/78)   [Kremote: Compressing objects:  62% (49/78)   [Kremote: Compressing objects:  64% (50/78)   [Kremote: Compressing objects:  65% (51/78)   [Kremote: Compressing objects:  66% (52/78)   [Kremote: Compressing objects:  67% (53/78)   [Kremote: Compressing objects:  69% (54/78)   [Kremote: Compressing objects:  70% (55/78)   [Kremote: Compressing objects:  71% (56/78)   [Kremote: Compressing objects:  73% (57/78)   [Kremote: Compressing objects:  74% (58/78)   [Kremote: Compressing objects:  75% (59/78)   [Kremote: Compressing objects:  76% (60/78)   [Kremote: Compressing objects:  78% (61/78)   [Kremote: Compressing objects:  79% (62/78)   [Kremote: Compressing objects:  80% (63/78)   [Kremote: Compressing objects:  82% (64/78)   [Kremote: Compressing objects:  83% (65/78)   [Kremote: Compressing objects:  84% (66/78)   [Kremote: Compressing objects:  85% (67/78)   [Kremote: Compressing objects:  87% (68/78)   [Kremote: Compressing objects:  88% (69/78)   [Kremote: Compressing objects:  89% (70/78)   [Kremote: Compressing objects:  91% (71/78)   [Kremote: Compressing objects:  92% (72/78)   [Kremote: Compressing objects:  93% (73/78)   [Kremote: Compressing objects:  94% (74/78)   [Kremote: Compressing objects:  96% (75/78)   [Kremote: Compressing objects:  97% (76/78)   [Kremote: Compressing objects:  98% (77/78)   [Kremote: Compressing objects: 100% (78/78)   [Kremote: Compressing objects: 100% (78/78), done.[K
+Unpacking objects:   1% (1/90)   Unpacking objects:   2% (2/90)   Unpacking objects:   3% (3/90)   Unpacking objects:   4% (4/90)   Unpacking objects:   5% (5/90)   Unpacking objects:   6% (6/90)   Unpacking objects:   7% (7/90)   Unpacking objects:   8% (8/90)   Unpacking objects:  10% (9/90)   Unpacking objects:  11% (10/90)   Unpacking objects:  12% (11/90)   Unpacking objects:  13% (12/90)   Unpacking objects:  14% (13/90)   Unpacking objects:  15% (14/90)   Unpacking objects:  16% (15/90)   Unpacking objects:  17% (16/90)   Unpacking objects:  18% (17/90)   Unpacking objects:  20% (18/90)   Unpacking objects:  21% (19/90)   Unpacking objects:  22% (20/90)   Unpacking objects:  23% (21/90)   Unpacking objects:  24% (22/90)   Unpacking objects:  25% (23/90)   Unpacking objects:  26% (24/90)   Unpacking objects:  27% (25/90)   Unpacking objects:  28% (26/90)   Unpacking objects:  30% (27/90)   Unpacking objects:  31% (28/90)   Unpacking objects:  32% (29/90)   Unpacking objects:  33% (30/90)   Unpacking objects:  34% (31/90)   Unpacking objects:  35% (32/90)   Unpacking objects:  36% (33/90)   Unpacking objects:  37% (34/90)   Unpacking objects:  38% (35/90)   Unpacking objects:  40% (36/90)   Unpacking objects:  41% (37/90)   Unpacking objects:  42% (38/90)   Unpacking objects:  43% (39/90)   Unpacking objects:  44% (40/90)   Unpacking objects:  45% (41/90)   Unpacking objects:  46% (42/90)   Unpacking objects:  47% (43/90)   Unpacking objects:  48% (44/90)   Unpacking objects:  50% (45/90)   Unpacking objects:  51% (46/90)   Unpacking objects:  52% (47/90)   Unpacking objects:  53% (48/90)   Unpacking objects:  54% (49/90)   Unpacking objects:  55% (50/90)   Unpacking objects:  56% (51/90)   Unpacking objects:  57% (52/90)   Unpacking objects:  58% (53/90)   Unpacking objects:  60% (54/90)   Unpacking objects:  61% (55/90)   Unpacking objects:  62% (56/90)   Unpacking objects:  63% (57/90)   Unpacking objects:  64% (58/90)   Unpacking objects:  65% (59/90)   Unpacking objects:  66% (60/90)   Unpacking objects:  67% (61/90)   Unpacking objects:  68% (62/90)   Unpacking objects:  70% (63/90)   Unpacking objects:  71% (64/90)   Unpacking objects:  72% (65/90)   Unpacking objects:  73% (66/90)   Unpacking objects:  74% (67/90)   Unpacking objects:  75% (68/90)   Unpacking objects:  76% (69/90)   Unpacking objects:  77% (70/90)   Unpacking objects:  78% (71/90)   Unpacking objects:  80% (72/90)   Unpacking objects:  81% (73/90)   Unpacking objects:  82% (74/90)   Unpacking objects:  83% (75/90)   Unpacking objects:  84% (76/90)   Unpacking objects:  85% (77/90)   Unpacking objects:  86% (78/90)   Unpacking objects:  87% (79/90)   Unpacking objects:  88% (80/90)   Unpacking objects:  90% (81/90)   remote: Total 90 (delta 10), reused 29 (delta 3)[K
+Unpacking objects:  91% (82/90)   Unpacking objects:  92% (83/90)   Unpacking objects:  93% (84/90)   Unpacking objects:  94% (85/90)   Unpacking objects:  95% (86/90)   Unpacking objects:  96% (87/90)   Unpacking objects:  97% (88/90)   Unpacking objects:  98% (89/90)   Unpacking objects: 100% (90/90)   Unpacking objects: 100% (90/90), done.
+From git://github.com/Satish/restful-authentication
+ * branch            HEAD       -> FETCH_HEAD
+[m[0;34m01/03/11[m @ [1;32m05:03PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m05:03PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mlsrails plugin install git://github.com/Satish/restful-authentication.git[C[C[C[C[Cls[Kclear[3Plscd ..[3Plsrm -rf restful-authentication/[C[C[C[C[Cls[Kcd vendor/plugins/[C[C[C[C[Cls[Krails g authenticated user sessions[C[C[C[C[Cgem list[K[C[C[C[C[Crails g authenticated user sessions[C[C[C[C[Cgem list[K[C[C[C[C[Crails g authenticated user sessions
+[1m[32m      create[0m  app/models/user.rb
+[1m[32m      create[0m  app/controllers/sessions_controller.rb
+[1m[32m      create[0m  app/controllers/users_controller.rb
+[1m[32m      create[0m  lib/authenticated_system.rb
+[1m[32m      create[0m  lib/authenticated_test_helper.rb
+[1m[32m      create[0m  config/initializers/site_keys.rb
+[1m[32m      create[0m  test/functional/sessions_controller_test.rb
+[1m[32m      create[0m  test/functional/users_controller_test.rb
+[1m[32m      create[0m  test/unit/user_test.rb
+[1m[32m      create[0m  test/fixtures/users.yml
+[1m[32m      create[0m  app/helpers/sessions_helper.rb
+[1m[32m      create[0m  app/helpers/users_helper.rb
+[1m[32m      create[0m  app/views/sessions/new.html.erb
+[1m[32m      create[0m  app/views/users/new.html.erb
+[1m[32m      create[0m  app/views/users/_user_bar.html.erb
+[1m[32m      create[0m  db/migrate/20110103220425_create_users.rb
+[1m[32m       route[0m  match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
+[1m[32m       route[0m  match 'logout' => 'sessions#destroy', :as => :logout
+[1m[32m       route[0m  match 'login' => 'sessions#new', :as => :login
+[1m[32m       route[0m  match 'register' => 'users#create', :as => :register
+[1m[32m       route[0m  match 'signup' => 'users#new', :as => :signup
+[1m[32m       route[0m  resource :session, :only => [:new, :create, :destroy]
+[1m[32m       route[0m  resources :users
+Ready to generate.
+----------------------------------------------------------------------
+Once finished, don't forget to:
+
+- Install the dynamic_form plugin(error_messages_for was removed from Rails and is now available as a plugin):
+    Install it with rails plugin install git://github.com/rails/dynamic_form.git
+- Add routes to these resources. In config/routes.rb, insert routes like:
+    match 'login' => 'sessions#new', :as => :login
+    match 'logout' => 'sessions#destroy', :as => :logout
+    match 'signup' => 'users#new', :as => :signup
+
+----------------------------------------------------------------------
+
+We've create a new site key in config/initializers/site_keys.rb.  If you have existing
+user accounts their passwords will no longer work (see README). As always,
+keep this file safe but don't post it in public.
+
+----------------------------------------------------------------------
+[m[0;34m01/03/11[m @ [1;32m05:04PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:migrate
+(in /Users/kdockz/Projects/nsbe)
+==  CreateUsers: migrating ====================================================
+-- create_table("users")
+   -> 0.0016s
+-- add_index(:users, :login, {:unique=>true})
+   -> 0.0008s
+==  CreateUsers: migrated (0.0026s) ===========================================
+
+[m[0;34m01/03/11[m @ [1;32m05:05PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails plugin install git://github.com/rails/dynamic_form.git
+Initialized empty Git repository in /Users/kdockz/Projects/nsbe/vendor/plugins/dynamic_form/.git/
+remote: Counting objects: 21, done.[K
+remote: Compressing objects:   6% (1/16)   [Kremote: Compressing objects:  12% (2/16)   [Kremote: Compressing objects:  18% (3/16)   [Kremote: Compressing objects:  25% (4/16)   [Kremote: Compressing objects:  31% (5/16)   [Kremote: Compressing objects:  37% (6/16)   [Kremote: Compressing objects:  43% (7/16)   [Kremote: Compressing objects:  50% (8/16)   [Kremote: Compressing objects:  56% (9/16)   [Kremote: Compressing objects:  62% (10/16)   [Kremote: Compressing objects:  68% (11/16)   [Kremote: Compressing objects:  75% (12/16)   [Kremote: Compressing objects:  81% (13/16)   [Kremote: Compressing objects:  87% (14/16)   [Kremote: Compressing objects:  93% (15/16)   [Kremote: Compressing objects: 100% (16/16)   [Kremote: Compressing objects: 100% (16/16), done.[K
+remote: Total 21 (delta 1), reused 15 (delta 1)[K
+Unpacking objects:   4% (1/21)   Unpacking objects:   9% (2/21)   Unpacking objects:  14% (3/21)   Unpacking objects:  19% (4/21)   Unpacking objects:  23% (5/21)   Unpacking objects:  28% (6/21)   Unpacking objects:  33% (7/21)   Unpacking objects:  38% (8/21)   Unpacking objects:  42% (9/21)   Unpacking objects:  47% (10/21)   Unpacking objects:  52% (11/21)   Unpacking objects:  57% (12/21)   Unpacking objects:  61% (13/21)   Unpacking objects:  66% (14/21)   Unpacking objects:  71% (15/21)   Unpacking objects:  76% (16/21)   Unpacking objects:  80% (17/21)   Unpacking objects:  85% (18/21)   Unpacking objects:  90% (19/21)   Unpacking objects:  95% (20/21)   Unpacking objects: 100% (21/21)   Unpacking objects: 100% (21/21), done.
+From git://github.com/rails/dynamic_form
+ * branch            HEAD       -> FETCH_HEAD
+[m[0;34m01/03/11[m @ [1;32m05:10PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:migrate:reset
+(in /Users/kdockz/Projects/nsbe)
+==  CreateEvents: migrating ===================================================
+-- create_table(:events)
+   -> 0.0026s
+==  CreateEvents: migrated (0.0030s) ==========================================
+
+==  CreateUsers: migrating ====================================================
+-- create_table("users")
+   -> 0.0026s
+-- add_index(:users, :login, {:unique=>true})
+   -> 0.0009s
+==  CreateUsers: migrated (0.0038s) ===========================================
+
+[m[0;34m01/03/11[m @ [1;32m05:15PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails g scaffold Registration user_id:int event_id:int [K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kteger[K[K[K[K[K[K[K[K[K[K[K[Kr_id:integer event_id:integer capacity:integer :[Kactive:boolean[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20110104012746_create_registrations.rb
+[1m[32m      create[0m    app/models/registration.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/registration_test.rb
+[1m[32m      create[0m      test/fixtures/registrations.yml
+[1m[32m       route[0m  resources :registrations
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/registrations_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/registrations
+[1m[32m      create[0m      app/views/registrations/index.html.erb
+[1m[32m      create[0m      app/views/registrations/edit.html.erb
+[1m[32m      create[0m      app/views/registrations/show.html.erb
+[1m[32m      create[0m      app/views/registrations/new.html.erb
+[1m[32m      create[0m      app/views/registrations/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/registrations_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/registrations_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/registrations_helper_test.rb
+[1m[37m      invoke[0m  stylesheets
+[1m[34m   identical[0m    public/stylesheets/scaffold.css
+[m[0;34m01/03/11[m @ [1;32m08:27PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:migrate:reset
+(in /Users/kdockz/Projects/nsbe)
+db/test.sqlite3 already exists
+==  CreateEvents: migrating ===================================================
+-- create_table(:events)
+   -> 0.0021s
+==  CreateEvents: migrated (0.0022s) ==========================================
+
+==  CreateUsers: migrating ====================================================
+-- create_table("users")
+   -> 0.0019s
+-- add_index(:users, :login, {:unique=>true})
+   -> 0.0008s
+==  CreateUsers: migrated (0.0029s) ===========================================
+
+==  CreateRegistrations: migrating ============================================
+-- create_table(:registrations)
+   -> 0.0013s
+==  CreateRegistrations: migrated (0.0014s) ===================================
+
+[m[0;34m01/03/11[m @ [1;32m08:28PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails g scaffold Announcement content:text stat[Krtdat[K[K[K_date:date end_date:date active:boolean
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20110104012959_create_announcements.rb
+[1m[32m      create[0m    app/models/announcement.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/announcement_test.rb
+[1m[32m      create[0m      test/fixtures/announcements.yml
+[1m[32m       route[0m  resources :announcements
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/announcements_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/announcements
+[1m[32m      create[0m      app/views/announcements/index.html.erb
+[1m[32m      create[0m      app/views/announcements/edit.html.erb
+[1m[32m      create[0m      app/views/announcements/show.html.erb
+[1m[32m      create[0m      app/views/announcements/new.html.erb
+[1m[32m      create[0m      app/views/announcements/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/announcements_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/announcements_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/announcements_helper_test.rb
+[1m[37m      invoke[0m  stylesheets
+[1m[34m   identical[0m    public/stylesheets/scaffold.css
+[m[0;34m01/03/11[m @ [1;32m08:29PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:migrate:reset
+(in /Users/kdockz/Projects/nsbe)
+db/test.sqlite3 already exists
+==  CreateEvents: migrating ===================================================
+-- create_table(:events)
+   -> 0.0025s
+==  CreateEvents: migrated (0.0030s) ==========================================
+
+==  CreateUsers: migrating ====================================================
+-- create_table("users")
+   -> 0.0050s
+-- add_index(:users, :login, {:unique=>true})
+   -> 0.0009s
+==  CreateUsers: migrated (0.0064s) ===========================================
+
+==  CreateRegistrations: migrating ============================================
+-- create_table(:registrations)
+   -> 0.0014s
+==  CreateRegistrations: migrated (0.0015s) ===================================
+
+==  CreateAnnouncements: migrating ============================================
+-- create_table(:announcements)
+   -> 0.0018s
+==  CreateAnnouncements: migrated (0.0253s) ===================================
+
+[m[0;34m01/03/11[m @ [1;32m08:30PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:migrate
+(in /Users/kdockz/Projects/nsbe)
+[m[0;34m01/03/11[m @ [1;32m08:32PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+cGemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m08:46PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m08:46PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[m
+[m[0;34m01/03/11[m @ [1;32m08:46PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[m
+[m[0;34m01/03/11[m @ [1;32m08:46PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[m
+[m[0;34m01/03/11[m @ [1;32m08:46PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m08:46PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:mgirate[K[K[K[K[K[Kigrate:reset
+(in /Users/kdockz/Projects/nsbe)
+db/test.sqlite3 already exists
+==  CreateEvents: migrating ===================================================
+-- create_table(:events)
+   -> 0.0032s
+==  CreateEvents: migrated (0.0033s) ==========================================
+
+==  CreateUsers: migrating ====================================================
+-- create_table("users")
+   -> 0.0025s
+-- add_index(:users, :login, {:unique=>true})
+   -> 0.1213s
+==  CreateUsers: migrated (0.1240s) ===========================================
+
+==  CreateRegistrations: migrating ============================================
+-- create_table(:registrations)
+   -> 0.0014s
+==  CreateRegistrations: migrated (0.0015s) ===================================
+
+==  CreateAnnouncements: migrating ============================================
+-- create_table(:announcements)
+   -> 0.0023s
+==  CreateAnnouncements: migrated (0.0024s) ===================================
+
+[m[0;34m01/03/11[m @ [1;32m08:51PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mls
+Gemfile		README		app		config.ru	doc		log		script		tmp		vendor
+Gemfile.lock	Rakefile	config		db		lib		public		test		typescript
+[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mclear
+[H[2J[m[0;34m01/03/11[m @ [1;32m08:55PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrails g controo[Kll[K[K[K[K[K[K[Kontroller Home index
+[1m[32m      create[0m  app/controllers/home_controller.rb
+[1m[32m       route[0m  get "home/index"
+[1m[37m      invoke[0m  erb
+[1m[32m      create[0m    app/views/home
+[1m[32m      create[0m    app/views/home/index.html.erb
+[1m[37m      invoke[0m  test_unit
+[1m[32m      create[0m    test/functional/home_controller_test.rb
+[1m[37m      invoke[0m  helper
+[1m[32m      create[0m    app/helpers/home_helper.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/helpers/home_helper_test.rb
+[m[0;34m01/03/11[m @ [1;32m08:57PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[mrake db:migrate:reset
+(in /Users/kdockz/Projects/nsbe)
+db/test.sqlite3 already exists
+==  CreateEvents: migrating ===================================================
+-- create_table(:events)
+   -> 0.0032s
+==  CreateEvents: migrated (0.0033s) ==========================================
+
+==  CreateUsers: migrating ====================================================
+-- create_table("users")
+   -> 0.0019s
+-- add_index(:users, :login, {:unique=>true})
+   -> 0.0009s
+==  CreateUsers: migrated (0.0030s) ===========================================
+
+==  CreateRegistrations: migrating ============================================
+-- create_table(:registrations)
+   -> 0.0012s
+==  CreateRegistrations: migrated (0.0014s) ===================================
+
+==  CreateAnnouncements: migrating ============================================
+-- create_table(:announcements)
+   -> 0.0025s
+==  CreateAnnouncements: migrated (0.0027s) ===================================
+
+[m[0;34m01/03/11[m @ [1;32m09:27PM [m([1;31mMonday[m) [1;30m| [m[[1;34m~/Projects/nsbe[m][1;30m
+>>[m

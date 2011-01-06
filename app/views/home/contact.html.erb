@@ -1,0 +1,49 @@
+<table>	
+	<tr> 
+		<td align="center"><table width="80%"><tr> 
+			<td width="45%" align="left" style="color: black;"> 
+				<strong>Chapter Address:</strong><br /> 
+				Carnegie Mellon University - NSBE<br /> 
+				4910 Forbes Ave<br /> 
+				Cyert Hall A-64<br /> 
+				Pittsburgh, PA 15213<br /> 
+				nsbe@andrew.cmu.edu
+			</td> 
+			<td width="35%" align="center"> 
+				<%= link_to(image_tag("suggestionbox.gif", :id => "suggestion"), contact_path) %>
+			</td></tr></table> 
+		</td> 
+	</tr>
+</table>
+<h1>Contact Us</h1>
+<p><em>Fields marked with an * are required</em></p><br />
+<form id="contactForm" method="get" action="">
+
+	<label for="fname">First Name:*</label>
+	<input id="fname" name="fname" size="25" class="required" minlength="1" />
+	<br />
+	<br />
+
+	<label for="lname">Last Name:*</label>
+	<input id="lname" name="lname" size="45" class="required" minlength="1" />
+	<br />
+	<br /> 
+
+	<label for="occupation">Title/Occupation:</label>
+	<input id="occupation" name="occupation" /> 
+	<br />
+	<br />
+
+	<label for="email">E-Mail:*</label>
+	<input id="email" name="email" size="25" class="required email" />
+	<br />
+	<br />
+
+	<label for="comment">Comment:</label>
+	<textarea id="comment" name="comment" cols="50" ></textarea>
+	<br />
+	<br />
+
+	<input class="submit" type="submit" value="Submit"/>
+
+</form>

@@ -1,0 +1,41 @@
+<script>
+$(function() {
+	$( "#accordion" ).accordion();
+});
+</script>
+
+<h1>Member Directory</h1>
+<div class="contentlines"></div>
+
+<h5>To view more information for a particular directory, click on the member's name to expand the information.</h5>
+
+<div id="accordion">
+
+	<% @users.each do |user| %>
+	<h3>&nbsp;<a href="#"><%=h user.nice_name %></a></h3>
+	<div>
+		<table id="users">
+
+			<tr>
+				<!-- left column -->
+				<td valign="top" width="400">
+					<h2>Member Contact Information</h2>
+
+					<p>
+						<b>Email:</b>
+						<%= user.email %>
+					</p>
+
+				</td>
+
+				<!-- spacer -->
+				<td width="35">&nbsp;</td>
+			</tr>
+
+		</table>
+	</div>
+	<%end%>
+</div>
+<br />
+<br />
+
