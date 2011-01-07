@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  def show
+  def my_account
     if (!current_user.nil?)
       @user = User.find(current_user.id)
     else
@@ -38,7 +38,8 @@ class UsersController < ApplicationController
     @user = User.create(params[:user])
     success = @user && @user.save
     if success && @user.errors.empty?
-            # Protects against session fixation attacks, causes request forgery
+      PostOffice.welcome_email(@user).deliver
+      # Protects against session fixation attacks, causes request forgery
       # protection if visitor resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
       # reset session
@@ -60,12 +61,12 @@ class UsersController < ApplicationController
         @user.password = resetpass
         @user.password_confirmation = resetpass
         if @user.save!
-          PostOffice.deliver_reset_password_msg(@user, resetpass) 
-          redirect_to home_path('home')
+          # PostOffice.deliver_reset_password_msg(@user, resetpass) 
+          redirect_to root_url
           flash[:notice] = "Password successfully reset.  Please check your email for your new password."
         else
           flash[:alert] = "Could not successfully reset your password  Please contact an administrator." 
-          redirect_to home_path('home')
+          redirect_to root_url
         end
       else   
         flash[:alert] = "Could not find the email specified." 

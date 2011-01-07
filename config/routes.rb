@@ -18,25 +18,19 @@ Nsbe::Application.routes.draw do
   resources :events
   
   
+  # User related routes
   match 'signup' => 'users#new', :as => :signup
-
   match 'register' => 'users#create', :as => :register
-
   match 'login' => 'sessions#new', :as => :login
-
   match 'logout' => 'sessions#destroy', :as => :logout
-  
-  match 'my_account' => 'users#show', :as => :my_account
-  
+  match 'my_account' => 'users#my_account', :as => :my_account
+  match 'show_profile' => 'users#show_profile', :as => :show_profile
   match 'edit/my_account' => 'users#edit', :as => :edit_my_account
-
   match 'change_password' => 'users#change_password', :as => :change_password
-  
-
   match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
   
+  # Home Related Routes
   root :to => 'home#index'
-  
   match 'home' => 'home#index', :as => :home
   match 'directory' => 'home#directory', :as => :directory
   match 'officers' => 'home#officers', :as => :officers

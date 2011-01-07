@@ -27,7 +27,15 @@ $(function() {
 					</p>
 
 					<p>
+						<strong>Major:</strong>
+						<%= user.get_major %>
 					</p>
+					
+					<p>
+						<strong>Year:</strong>
+						<%= user.get_class %>
+					</p>
+					
 
 				</td>
 
@@ -38,7 +46,7 @@ $(function() {
 				<td valign="top" width="400">
 					<p>
 						<strong>Photo:</strong>
-						<%= image_tag user.photo.url %>
+						<%= image_tag user.photo.url(:medium) %>
 					</p>
 
 				</td>
