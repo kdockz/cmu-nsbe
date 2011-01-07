@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.integer  "class_level"
     t.integer  "major"
     t.boolean  "active"
+    t.text     "biography"
+    t.integer  "access_level"
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.datetime "created_at"

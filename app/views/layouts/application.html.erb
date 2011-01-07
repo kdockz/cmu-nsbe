@@ -14,43 +14,93 @@
 		$( "input:submit" ).button();
 	});
 	</script>
-
 	
+	<div id="login-container">
+		<div id="signin_menu" >
+			<%= form_tag session_path do -%>
+				<p>
+					<label for="login">Username</label><br/>
+					<%= text_field_tag 'login' %>
+				</p>
+
+				<p>
+					<label for="password">Password</label><br/>
+					<%= password_field_tag 'password' %>
+				</p>
+
+				<p>
+					<label for="remember_me">Remember me:</label><%= check_box_tag 'remember_me' %><br /><br />
+					<%= submit_tag 'Log in', :class => 'sigin_submit' %>
+				</p>
+
+				<p>
+					<%# link_to 'Reset Password', :controller => 'users', :action => 'reset_password' %>
+				</p>
+			<% end -%>
+		
+			</div>
+				<ul>
+					<% if !logged_in? %>
+
+					<script type="text/javascript">
+					$(document).ready(function() {
+						$(".signin").click(function(e) {
+							e.preventDefault();
+							$("#signin_menu").slideToggle(1000, function() {
+								// Animation complete.
+							});
+						});
+					});
+					</script>
+
+						<li><%= link_to 'Register', signup_path %></li>
+						<li class="signin">Login</li>
+					<% else %>
+						<li><%= link_to 'My Account', my_account_path %></li>
+						<li><%= link_to 'Logout', logout_path %></li>
+					<% end %>
+				</ul>
+
+	</div>
 	<div id="container">
 		<div id="header">
 			<div id="navigation">
 				<ul id="menu">
 					<li class="menu">
 						<%= link_to(root_url) do %>
-					    	Home<br /><%= image_tag('home.png') %>
+					    	Home<br /><%= image_tag('nav/home.png') %>
 						<% end %>
 					</li>  	
 					<li class="menu">	
 						<%= link_to(events_path) do %>
-					    	Events<br /><%= image_tag('events.png') %>
+					    	Events<br /><%= image_tag('nav/events.png') %>
 					  	<% end %>
 					</li>
 					<li class="menu">
 						<%= link_to(directory_path) do %>
-					    	Directory<br /><%= image_tag('directory.png') %>
+					    	Directory<br /><%= image_tag('nav/directory.png') %>
 					  	<% end %>
 					</li>
 					<li class="menu">
 						<%= link_to(officers_path) do %>
-					    	Officers<br /><%= image_tag('officers.png') %>
+					    	Officers<br /><%= image_tag('nav/officers.png') %>
 					  	<% end %>
 					</li>
 					<li class="menu">
 						<%= link_to(contact_path) do %>
-					    	Contact<br /><%= image_tag('contact.png') %>
+					    	Contact<br /><%= image_tag('nav/contact.png') %>
+					  	<% end %>
+					</li>
+					<li class="menu">
+						<%= link_to(about_path) do %>
+					    	About<br /><%= image_tag('nav/about.png') %>
 					  	<% end %>
 					</li>
 				</ul>
 			</div>
 		</div>
-
+		<%= show_flash_message(:fade => 10) %>
 		<div id="content">
-			<%= show_flash_message(:fade => 10) %>
 			<%= yield %>
 		</div>
 

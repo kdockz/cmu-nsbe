@@ -1,0 +1,26 @@
+<p>
+  <b>Name:</b>
+  <%= @user.nice_name %>
+</p>
+
+<p>
+  <b>Major:</b>
+  <%= @user.major %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @user.class_level %>
+</p>
+
+<p>
+  <b>Biography:</b>
+  <%= @user.biography %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @user.photo.url %>
+</p>
+
+<%= link_to 'Edit', edit_my_account_path %> | <%= link_to 'Change Password', change_password_path %> <br /><br/>

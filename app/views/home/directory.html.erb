@@ -22,18 +22,26 @@ $(function() {
 					<h2>Member Contact Information</h2>
 
 					<p>
-						<b>Email:</b>
+						<strong>Email:</strong>
 						<%= user.email %>
 					</p>
-					
+
 					<p>
-  						<%= image_tag user.photo.url %>
 					</p>
 
 				</td>
 
 				<!-- spacer -->
 				<td width="35">&nbsp;</td>
+
+				<!-- right column -->
+				<td valign="top" width="400">
+					<p>
+						<strong>Photo:</strong>
+						<%= image_tag user.photo.url %>
+					</p>
+
+				</td>
 			</tr>
 
 		</table>

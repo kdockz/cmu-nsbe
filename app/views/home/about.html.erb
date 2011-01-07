@@ -1,0 +1,27 @@
+<script>
+$(function() {
+	$( "#tabs" ).tabs();
+});
+</script>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Mission & Objectives</a></li>
+		<li><a href="#tabs-2">Quick Facts</a></li>
+		<li><a href="#tabs-3">Brief History</a></li>
+		<li><a href="#tabs-4">Founding Fathers</a></li>
+
+	</ul>
+	<div id="tabs-1">		
+		<%= render :partial => 'mission' %>
+	</div>
+	<div id="tabs-2">
+		<%= render :partial => 'facts' %>
+	</div>
+	<div id="tabs-3">
+		<%= render :partial => 'history' %>
+	</div>
+	<div id="tabs-4">
+		<%= render :partial => 'fathers' %>
+	</div>
+</div>

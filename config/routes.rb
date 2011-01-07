@@ -25,6 +25,13 @@ Nsbe::Application.routes.draw do
   match 'login' => 'sessions#new', :as => :login
 
   match 'logout' => 'sessions#destroy', :as => :logout
+  
+  match 'my_account' => 'users#show', :as => :my_account
+  
+  match 'edit/my_account' => 'users#edit', :as => :edit_my_account
+
+  match 'change_password' => 'users#change_password', :as => :change_password
+  
 
   match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
   
@@ -34,6 +41,9 @@ Nsbe::Application.routes.draw do
   match 'directory' => 'home#directory', :as => :directory
   match 'officers' => 'home#officers', :as => :officers
   match 'contact' => 'home#contact', :as => :contact
+  match 'about' => 'home#about', :as => :about
+  
+  
   
 
   # The priority is based upon order of creation:

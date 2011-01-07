@@ -34,10 +34,10 @@ class User < ActiveRecord::Base
   :format     => { :with => Authentication.email_regex, :message => Authentication.bad_email_message },
   :length     => { :within => 6..100 }
   
-  validates_attachment_presence :photo                    
-  validates_attachment_size :photo, :less_than=>2.megabyte
-  validates_attachment_content_type :photo, :content_type=>['image/jpeg', 'image/png', 'image/gif']
-
+  # validates_attachment_presence :photo                    
+  #  validates_attachment_size :photo, :less_than=>2.megabyte
+  #  validates_attachment_content_type :photo, :content_type=>['image/jpeg', 'image/png', 'image/gif']
+ 
 
 
   # HACK HACK HACK -- how to do attr_accessible from here?
