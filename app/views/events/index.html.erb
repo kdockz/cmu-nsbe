@@ -1,4 +1,6 @@
-<p>See my <%= link_to 'registrations', my_events_path %>.</p>
+<% if logged_in? %>
+	<p>See my <%= link_to 'registrations', my_events_path %>.</p>
+<% end %>
 <h1>Listing events</h1>
 
 <table>

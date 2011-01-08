@@ -8,7 +8,14 @@ class Event < ActiveRecord::Base
   # Array
   STATUS = [['Upcoming', 0], ['Complete', 1]]
   
+  # Validations
+  validates_presence_of :name, :location, :description, :user_id
+  validates_inclusion_of :user_id, :in => User.all.map{|u| u.id }
+  
+  # Scopes
+  
 
+  # Methods
   def get_status
     unless self.status.nil? then 
       return STATUS[self.status][0]

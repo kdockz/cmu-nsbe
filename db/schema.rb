@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
   create_table "events", :force => true do |t|
     t.string   "name"
     t.string   "location"
+    t.text     "description"
     t.date     "start_date"
     t.date     "end_date"
     t.string   "start_time"
