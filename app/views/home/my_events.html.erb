@@ -1,0 +1,13 @@
+<h2>My Events</h2>
+<% unless @registrations.nil? || @registrations.empty? %>
+<table>
+	<% @registrations.each do |registration| %>
+		<tr>
+			<td><%=	Event.find(registration.event_id).name %></td>
+			<td><%= button_to "Unregister", get_member_registration(Event.find(registration.event_id), current_user), :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %></td>
+		</tr>
+	<% end %>
+</table>
+<% else %>
+<p>You are not registered for any upcoming events.</p>
+<% end %>

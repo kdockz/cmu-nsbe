@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.string   "end_time"
     t.integer  "user_id"
     t.integer  "capacity"
+    t.boolean  "registration"
     t.integer  "status"
     t.boolean  "active"
     t.datetime "created_at"
@@ -73,7 +74,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.integer  "major"
     t.boolean  "active"
     t.text     "biography"
-    t.integer  "access_level"
+    t.integer  "access_level",                             :default => 10
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.datetime "created_at"

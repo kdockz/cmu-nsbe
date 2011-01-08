@@ -9,6 +9,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :end_time
       t.integer :user_id
       t.integer :capacity
+      t.boolean :registration
       t.integer :status
       t.boolean :active
 

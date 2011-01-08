@@ -20,7 +20,5 @@
 
 <p>
   <b>Photo:</b>
-	<%= image_tag @user.photo.url(:medium) %>
+  <%= @user.photo.url %>
 </p>
-
-<%= link_to 'Edit', edit_my_account_path %> | <%= link_to 'Change Password', change_password_path %> | <%= link_to 'My Registrations', my_events_path %><br /><br/>

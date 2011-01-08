@@ -27,7 +27,7 @@
 							<% @members.each do |m| %>
 							<tr class="members"> 
 								<td><%= link_to(m.position.name, position_path(m.position)) %></td> 
-								<td><%= m.user.nice_name %></td> 
+								<td><%= link_to(m.user.nice_name, show_profile_path(m.user.id)) %></td> 
 								<td><%= m.position.email %></td> 
 							</tr> 
 							<% end %>

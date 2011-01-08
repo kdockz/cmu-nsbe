@@ -1,20 +1,12 @@
 Nsbe::Application.routes.draw do
+  
   resources :zones
-
   resources :position_members
-
   resources :positions
-
-  get "home/index"
-
   resources :announcements
-
   resources :registrations
-
   resources :users
-
   resource :session, :only => [:new, :create, :destroy]
-
   resources :events
   
   
@@ -24,18 +16,21 @@ Nsbe::Application.routes.draw do
   match 'login' => 'sessions#new', :as => :login
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'my_account' => 'users#my_account', :as => :my_account
-  match 'show_profile' => 'users#show_profile', :as => :show_profile
+  match 'show_profile/:id' => 'users#show_profile', :as => :show_profile, :id => nil
   match 'edit/my_account' => 'users#edit', :as => :edit_my_account
   match 'change_password' => 'users#change_password', :as => :change_password
+  match 'reset_password' => 'users#reset_password', :as => :reset_password
   match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
   
   # Home Related Routes
+  get "home/index"
   root :to => 'home#index'
   match 'home' => 'home#index', :as => :home
   match 'directory' => 'home#directory', :as => :directory
   match 'officers' => 'home#officers', :as => :officers
   match 'contact' => 'home#contact', :as => :contact
   match 'about' => 'home#about', :as => :about
+  match 'my_events' => 'home#my_events', :as => :my_events
   
   
   

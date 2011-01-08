@@ -83,6 +83,13 @@ class User < ActiveRecord::Base
     end
     "Unavailable"
   end
+  
+  def admin?
+    unless access_level != 50 then
+      return true
+    end
+    false
+  end
 
   protected
 

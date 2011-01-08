@@ -10,7 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.column :major,                     :integer
       t.column :active,                    :boolean
       t.column :biography,                 :text
-      t.column :access_level,              :integer
+      t.column :access_level,              :integer, :default => 10
       t.column :crypted_password,          :string, :limit => 40
       t.column :salt,                      :string, :limit => 40
       t.column :created_at,                :datetime

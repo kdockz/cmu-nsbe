@@ -43,17 +43,14 @@
     <%= f.text_field :end_time %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+    <%= f.label :capacity %><br />
+    <%= f.text_field :capacity %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
+    <%= f.label 'Open Registration' %><br />
+	<%= f.select :registration, [['Yes', true], ['No', false]] %>
   </div>
-  <div class="field">
-    <%= f.label :active %><br />
-    <%= f.check_box :active %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

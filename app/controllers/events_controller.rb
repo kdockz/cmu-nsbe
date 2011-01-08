@@ -1,8 +1,11 @@
 class EventsController < ApplicationController
+  
+  before_filter :login_required, :except => [:show, :index]
   # GET /events
   # GET /events.xml
   def index
     @events = Event.all
+    session[:event] = nil
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +17,7 @@ class EventsController < ApplicationController
   # GET /events/1.xml
   def show
     @event = Event.find(params[:id])
+    session[:event] = @event
 
     respond_to do |format|
       format.html # show.html.erb
@@ -41,6 +45,8 @@ class EventsController < ApplicationController
   # POST /events.xml
   def create
     @event = Event.new(params[:event])
+    
+    @event.user_id = current_user.id
 
     respond_to do |format|
       if @event.save

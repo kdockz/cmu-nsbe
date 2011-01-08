@@ -20,7 +20,9 @@ class RegistrationsController < ApplicationController
       format.xml  { render :xml => @registration }
     end
   end
+  def register_member
 
+  end
   # GET /registrations/new
   # GET /registrations/new.xml
   def new
@@ -39,12 +41,25 @@ class RegistrationsController < ApplicationController
 
   # POST /registrations
   # POST /registrations.xml
-  def create
-    @registration = Registration.new(params[:registration])
+  def create    
+    unless session[:event].nil?
+      @registration = Registration.new
+      @event = session[:event]
+      @registration.event_id = @event.id
+      @registration.user_id = current_user.id
+    else 
+      @registration = Registration.new(params[:registration])
+      @event = Event.find(@registration.event_id)
+    end
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to(@registration, :notice => 'Registration was successfully created.') }
+        if session[:event].nil?
+          format.html { redirect_to(@registration, :notice => 'Registration was successfully created.') }
+        else 
+          session[:event] = nil
+          format.html { redirect_to event_path(@event), :notice => "You have successfully registered for #{@event.name}." }
+        end
         format.xml  { render :xml => @registration, :status => :created, :location => @registration }
       else
         format.html { render :action => "new" }

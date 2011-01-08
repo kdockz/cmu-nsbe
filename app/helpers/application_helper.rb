@@ -10,4 +10,13 @@ module ApplicationHelper
     end
     html
   end
+  
+  def check_member_registration(event, user)
+    return true if Registration.find(:first, :conditions => ['event_id = ? and user_id = ?', event.id, user.id])
+    false
+  end
+  
+  def get_member_registration(event, user)
+    return Registration.find(:first, :conditions => ['event_id = ? and user_id = ?', event.id, user.id])
+  end
 end

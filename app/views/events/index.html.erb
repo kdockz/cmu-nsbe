@@ -1,35 +1,47 @@
+<p>See my <%= link_to 'registrations', my_events_path %>.</p>
 <h1>Listing events</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Location</th>
-    <th>Start date</th>
-    <th>End date</th>
-    <th>Start time</th>
-    <th>End time</th>
+    <th>Date</th>
+    <th>Time</th>
     <th>User</th>
     <th>Status</th>
-    <th>Active</th>
     <th></th>
-    <th></th>
-    <th></th>
+	<% if logged_in? %>
+	    <th></th>
+	    <th></th>
+	<% end %>
   </tr>
 
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.location %></td>
-    <td><%= event.start_date %></td>
-    <td><%= event.end_date %></td>
-    <td><%= event.start_time %></td>
-    <td><%= event.end_time %></td>
-    <td><%= event.user_id %></td>
-    <td><%= event.status %></td>
-    <td><%= event.active %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td>
+		<%= if event.start_date.nil? and event.end_date.nil? then '-' 
+		elsif event.start_date.nil? then event.end_date.strftime("%B %d, %Y") 
+		elsif event.end_date.nil? or event.start_date == event.end_date then event.start_date.strftime("%B %d, %Y" ) 
+		else event.start_date.strftime("%B %d, %Y" ) + ' - ' + event.end_date.strftime("%B %d, %Y" ) 
+		end %>
+	</td>
+	<td>
+		<%= if event.start_time.nil? and event.end_time.nil? then 'TBD' 
+		elsif event.start_time.nil? then Chronic::parse(event.end_time).strftime("%l:%M %p")
+		elsif event.end_time.nil? or event.start_time == event.end_time then Chronic::parse(event.start_time).strftime("%l:%M %p") 
+		else Chronic::parse(event.start_time).strftime("%l:%M %p") + " - " + Chronic::parse(event.end_time).strftime("%l:%M %p")
+		end %>
+	</td>
+    <td><%= event.user.nice_name %></td>
+    <td><%= event.get_status %></td>
+	<td><%= link_to image_tag('refresh.gif', :border => 0, :size => "20x20"), event %></td>
+
+	<% if logged_in? %>
+    	<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_event_path(event) %></td>
+		<td><%= button_to "Delete", event, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>

@@ -11,40 +11,65 @@
 </p>
 
 <p>
-  <b>Start date:</b>
-  <%= @event.start_date %>
+  <b>Date:</b>
+	<%= if @event.start_date.nil? and @event.end_date.nil? then '-' 
+	elsif @event.start_date.nil? then @event.end_date.strftime("%B %d, %Y") 
+	elsif @event.end_date.nil? or @event.start_date == @event.end_date then @event.start_date.strftime("%B %d, %Y" ) 
+	else @event.start_date.strftime("%B %d, %Y" ) + ' - ' + @event.end_date.strftime("%B %d, %Y" ) 
+	end %>
 </p>
 
 <p>
-  <b>End date:</b>
-  <%= @event.end_date %>
+  <b>Time:</b>
+	<%= if @event.start_time.nil? and @event.end_time.nil? then 'TBD' 
+	elsif @event.start_time.nil? then Chronic::parse(@event.end_time).strftime("%l:%M %p")
+	elsif @event.end_time.nil? or @event.start_time == @event.end_time then Chronic::parse(@event.start_time).strftime("%l:%M %p") 
+	else Chronic::parse(@event.start_time).strftime("%l:%M %p") + " - " + Chronic::parse(@event.end_time).strftime("%l:%M %p")
+	end %>
 </p>
-
-<p>
-  <b>Start time:</b>
-  <%= @event.start_time %>
-</p>
-
-<p>
-  <b>End time:</b>
-  <%= @event.end_time %>
-</p>
-
+<% if current_user.admin? %>
 <p>
   <b>User:</b>
-  <%= @event.user_id %>
+  <%= @event.user.nice_name %>
 </p>
-
-<p>
-  <b>Status:</b>
-  <%= @event.status %>
-</p>
-
 <p>
   <b>Active:</b>
   <%= @event.active %>
 </p>
+<p>
+  <b>Status:</b>
+  <%= @event.status %>
+</p>
+<% end %>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<% if logged_in? %>
+	<% if @event.registration == false %>
+	<table>
+		<tr>
+			<td><%= button_to "Register", { :controller => 'registrations', :action => 'create' }, :disabled => true %></td>
+			<td><strong>Registration for this event is closed.</strong></td>
+		</tr>
+	</table>
+	<% elsif !@event.free_space? %>
+	<table>
+		<tr>
+			<td><%= button_to "Register", { :controller => 'registrations', :action => 'create' }, :disabled => true %></td>
+			<td><strong>This event is full.</strong></td>
+		</tr>
+	</table>
+	<% elsif check_member_registration(@event, current_user) %>
+	<table>
+		<tr>
+			<td><%= button_to "Register", { :controller => 'registrations', :action => 'create' }, :disabled => true %></td>
+			<td><strong>You are already registered for this event.</strong></td>
+		</tr>
+	</table>
+	<% else %>
+		<p><%= button_to "Register", { :controller => 'registrations', :action => 'create' } %></p>
+	<% end %>
+	<% if current_user.admin? %>
+		<%= link_to 'Edit', edit_event_path(@event) %> |
+		<%= link_to 'Back', events_path %>
+	<% end %>
+<% end %>

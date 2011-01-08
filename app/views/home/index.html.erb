@@ -1,29 +1,73 @@
-<div class="announcement_content">
-	<h2>Friendly Reminders</h2>
-	<% if !@announcements.empty? %>
-	<ul>
-		<% for announcement in @announcements %>
-		<li><%= h announcement.content %></li><br />
-		<% end %>
-	</ul>
-	<% else %>
-	<ul>
-		<li>No recent announcements to display.</li>
-	</ul>
-	<% end %>
-</div>
-
-<div class="events_content">
-	<h2>Upcoming Events</h2>
-	<% if !@events.empty? %>
-	<ul>
-		<% for event in @events %>
-		<li><%= h event.name %></li><br />
-		<% end %>
-	</ul>
-	<% else %>
-	<ul>
-		<li>No upcoming events.</li>
-	</ul>
-	<% end %>
-</div>
+<table id="home_table">
+	<tr>
+		<td>
+			<div class="announcement_content">
+				<h2>Friendly Reminders</h2>
+				<% if !@announcements.empty? %>
+				<ul>
+					<% for announcement in @announcements %>
+					<li><%= h announcement.content %></li><br />
+					<% end %>
+				</ul>
+				<% else %>
+				<ul>
+					<li>No recent announcements to display.</li>
+				</ul>
+				<% end %>
+			</div>
+		</td>
+		<td rowspan="2">
+			<div id = "twitter">
+				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+					new TWTR.Widget({
+					version: 2,
+					type: 'profile',
+					rpp: 5,
+					interval: 6000,
+					width: 300,
+					height: 10,
+					theme: {
+						shell: {
+							background: '#e1e1e1',
+							color: '#388fc5'
+						},
+						tweets: {
+							background: '#e6e6dd',
+							color: '#666666',
+							links: '#388fc5'
+						}
+					},
+					features: {
+						scrollbar: true,
+						loop: false,
+						live: false,
+						hashtags: true,
+						timestamp: true,
+						avatars: false,
+						behavior: 'all'
+					}
+					}).render().setUser('nsberegion2').start();
+				</script>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="events_content">
+				<h2>Upcoming Events</h2>
+				<% if !@events.empty? %>
+				<ul>
+					<% for event in @events %>
+					<li><%= h event.name %></li><br />
+					<% end %>
+				</ul>
+				<% else %>
+				<ul>
+					<li>No upcoming events.</li>
+				</ul>
+				<% end %>
+			</div>
+		</td>
+	</tr>
+</table>

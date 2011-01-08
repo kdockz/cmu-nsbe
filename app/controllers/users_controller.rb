@@ -13,6 +13,9 @@ class UsersController < ApplicationController
     end
   end
   
+  def show_profile
+    @user = User.find(params[:id])
+  end
   def edit
     @user = User.find(current_user.id)
   end
@@ -61,7 +64,7 @@ class UsersController < ApplicationController
         @user.password = resetpass
         @user.password_confirmation = resetpass
         if @user.save!
-          # PostOffice.deliver_reset_password_msg(@user, resetpass) 
+          PostOffice.reset_password_email(@user, resetpass).deliver 
           redirect_to root_url
           flash[:notice] = "Password successfully reset.  Please check your email for your new password."
         else

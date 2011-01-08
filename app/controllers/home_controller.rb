@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    session[:event] = nil
     @announcements = Announcement.all
     @events = Event.all
   end
@@ -16,4 +17,7 @@ class HomeController < ApplicationController
 
   end
 
+  def my_events
+    @registrations = Registration.find(:all, :conditions => ['user_id = ?', current_user.id])
+  end
 end

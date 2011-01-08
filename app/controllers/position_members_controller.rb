@@ -44,6 +44,9 @@ class PositionMembersController < ApplicationController
 
     respond_to do |format|
       if @position_member.save
+        @user = User.find(@position_member.user_id)
+        @user.access_level = 30
+        @user.save!
         format.html { redirect_to(@position_member, :notice => 'Position member was successfully created.') }
         format.xml  { render :xml => @position_member, :status => :created, :location => @position_member }
       else
