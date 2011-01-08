@@ -61,6 +61,7 @@ namespace :db do
       m.last_name = member[1]
       m.email = member[2]
       m.major = member[3]
+      m.class_level = member[4]
       m.active = true
       username = member[2].split('@')
       m.login = username[0]
@@ -70,7 +71,7 @@ namespace :db do
 
       #Create them in the position
       pm = PositionMember.new
-      position = Position.find(:first, :conditions => ['name = ?', member[4]])
+      position = Position.find(:first, :conditions => ['name = ?', member[5]])
       pm.position_id =  position.id
       pm.user_id = m.id
       pm.active = true

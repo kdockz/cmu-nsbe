@@ -17,9 +17,9 @@ class User < ActiveRecord::Base
   has_attached_file :photo, :styles => { :medium => "100x100>", :thumb => "50x50>" }
   
   # Arrays
-  MAJORS = [["Biological Science", 0], ["Business", 1], ["Chemical Engineering", 2], ["Chemistry", 3], ["CIT--Undeclared", 4], ["Civil Engineering", 5], ["Computer Science", 6], ["Electrical & Computer Engineering", 7], ["Information Systems Management", 8], ["Information Systems", 9], ["Material Science Engineering", 10], ["Mathematical Science", 11], ["Mechanical Engineering", 12], ["Physics", 13], ["Policy & Management", 14], ["Other", 15], ["Undecided", 16]] 
-   CLASS_LEVELS = [['Freshman', 0], ['Sophomore', 1], ['Junior', 2], ['Senior', 3], ['Graduate']]
-  
+  MAJORS = [["Biological Sciences", 0], ["Business", 1], ["Chemical Engineering", 2], ["Chemistry", 3], ["CIT--Undeclared", 4], ["Civil & Environmental Engineering", 5], ["Computer Science", 6], ["Electrical & Computer Engineering", 7], ["Information Systems Management", 8], ["Information Systems", 9], ["Material Science & Engineering", 10], ["Mathematical Sciences", 11], ["Mechanical Engineering", 12], ["Physics", 13], ["Policy & Management", 14], ["Other", 15], ["Undecided", 16]] 
+   CLASS_LEVELS = [['Freshman', 0], ['Sophomore', 1], ['Junior', 2], ['Senior', 3], ['Graduate', 4], ['Alumni', 5]]
+     
   # Validations
   validates :login, :presence   => true,
   :uniqueness => true,
