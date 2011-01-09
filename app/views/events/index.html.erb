@@ -30,9 +30,9 @@
 		end %>
 	</td>
 	<td>
-		<%= if event.start_time.nil? and event.end_time.nil? then 'TBD' 
-		elsif event.start_time.nil? then Chronic::parse(event.end_time).strftime("%l:%M %p")
-		elsif event.end_time.nil? or event.start_time == event.end_time then Chronic::parse(event.start_time).strftime("%l:%M %p") 
+		<%= if event.start_time.empty? and event.end_time.empty? then 'TBD' 
+		elsif event.start_time.empty? then Chronic::parse(event.end_time).strftime("%l:%M %p")
+		elsif event.end_time.empty? or event.start_time == event.end_time then Chronic::parse(event.start_time).strftime("%l:%M %p") 
 		else Chronic::parse(event.start_time).strftime("%l:%M %p") + " - " + Chronic::parse(event.end_time).strftime("%l:%M %p")
 		end %>
 	</td>
