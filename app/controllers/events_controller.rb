@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
-  
   before_filter :login_required, :except => [:show, :index]
+  load_and_authorize_resource
+  
   # GET /events
   # GET /events.xml
   def index
@@ -47,7 +48,9 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     
     @event.user_id = current_user.id
-
+    
+    @event.active = true
+    
     respond_to do |format|
       if @event.save
         format.html { redirect_to(@event, :notice => 'Event was successfully created.') }

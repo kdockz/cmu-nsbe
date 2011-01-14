@@ -1,11 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "cancan"
 gem "authlogic"
 gem "will_paginate"
-gem "chronic"
+gem "aaronh-chronic"
+# gem "chronic"
 gem "populator"
 gem "faker"
 gem "formtastic"

@@ -1,6 +1,8 @@
 module ApplicationHelper
   def show_flash_message(options={})
-    html = content_tag(:div, raw(flash.collect{ |name,msg| content_tag(:div, msg, :id => "flash_#{name}") }), :id => 'flash-message')
+    
+    html = raw(content_tag(:div, raw(flash.collect{ |name,msg| content_tag(:div, msg, :id => "flash_#{name}") }.join) , :id => 'flash-message'))
+
     if options.key?(:fade)
       html << content_tag(:script, "$(document).ready(function() { 
       $(\'#flash-message\').fadeOut(#{options[:fade]*1000}, function() { 
@@ -8,15 +10,16 @@ module ApplicationHelper
         }); 
       });", :type => 'text/javascript')
     end
+    
     html
   end
   
   def check_member_registration(event, user)
-    return true if Registration.find(:first, :conditions => ['event_id = ? and user_id = ?', event.id, user.id])
+    return true if Registration.where('event_id = ? and user_id = ?', event.id, user.id).first
     false
   end
   
   def get_member_registration(event, user)
-    return Registration.find(:first, :conditions => ['event_id = ? and user_id = ?', event.id, user.id])
+    return Registration.where('event_id = ? and user_id = ?', event.id, user.id).first
   end
 end

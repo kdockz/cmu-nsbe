@@ -52,22 +52,31 @@
 			</div>
 		</td>
 	</tr>
-	<tr>
-		<td>
-			<div class="events_content">
-				<h2>Upcoming Events</h2>
-				<% if !@events.empty? %>
-				<ul>
-					<% for event in @events %>
-					<li><%= h event.name %></li><br />
-					<% end %>
-				</ul>
-				<% else %>
-				<ul>
-					<li>No upcoming events.</li>
-				</ul>
-				<% end %>
-			</div>
-		</td>
-	</tr>
+		<!--
+			<tr>
+				<td>
+
+					<h1 id="event_title">Today's Events</h1>
+					<br />
+					<div id="display_events">
+						<%= render :partial => 'event_item', :collection => @todays_events %>
+					</div> 
+				</td>
+			</tr>
+		-->
+		<!--
+			<tr>
+				<td>
+
+					<div id="switch">
+						<p class="smtext">
+							Show: &nbsp;&nbsp;
+							<%= link_to "Today's Events", :url => { :controller => 'events', :action => 'index' }, :collection => @todays_events, :remote => true %>
+							&nbsp;&nbsp;
+							<%= link_to "Upcoming Events", :url => { :controller => 'events', :action => 'show' }, :collection => @upcoming_events, :remote => true %>
+						</p>
+					</div> 
+				</td>
+			</tr>
+		-->
 </table>

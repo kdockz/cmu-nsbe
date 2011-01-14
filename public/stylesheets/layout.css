@@ -288,3 +288,11 @@ h1, h2, h3, h4, h5, h6 {
 #registration_button input {
 	display: inline;
 }
+.event {
+	background-color: #d1ecfb;
+	width: 400px;
+	padding-left: 10px;
+	border: 1px solid blue;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}

@@ -16,6 +16,11 @@ class User < ActiveRecord::Base
   has_many :events, :through => :registrations
   has_attached_file :photo, :styles => { :medium => "100x100>", :thumb => "50x50>" }
   
+  # Note - User levels will be defined as follows:
+  # 10 - NSBE Chapter and/or National Member
+  # 30 - NSBE Executive Board
+  # 50 - Site Administrator (Should be person(s) in charge of managing the site, as well as the chapter president. Other administrators will be appointed as current administrators see fit.)
+  
   # Arrays
   MAJORS = [["Biological Sciences", 0], ["Business", 1], ["Chemical Engineering", 2], ["Chemistry", 3], ["CIT--Undeclared", 4], ["Civil & Environmental Engineering", 5], ["Computer Science", 6], ["Electrical & Computer Engineering", 7], ["Information Systems Management", 8], ["Information Systems", 9], ["Material Science & Engineering", 10], ["Mathematical Sciences", 11], ["Mechanical Engineering", 12], ["Physics", 13], ["Policy & Management", 14], ["Other", 15], ["Undecided", 16]] 
    CLASS_LEVELS = [['Freshman', 0], ['Sophomore', 1], ['Junior', 2], ['Senior', 3], ['Graduate', 4], ['Alumni', 5]]
@@ -94,13 +99,36 @@ class User < ActiveRecord::Base
     "Unavailable"
   end
   
-  def admin?
-    unless access_level != 50 then
-      return true
+  def get_biography
+    unless self.biography.nil? || self.biography.empty? then
+      return biography
     end
-    false
+    "#{self.first_name} has not set their biography."
+  end
+  
+  def admin_or_eboard?
+    if access_level >= 30 then
+      return true
+    else
+      return false
+    end
+  end
+  
+  def admin?
+    if access_level == 50 then
+      return true
+    else
+     return false
+   end
   end
 
+  def eboard_member?
+    if access_level == 30 then
+      return true
+    else
+      return false
+    end
+  end
   protected
 
 

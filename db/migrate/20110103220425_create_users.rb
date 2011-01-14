@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.column :first_name,                :string, :limit => 100, :default => '', :null => true
       t.column :last_name,                 :string, :limit => 100
       t.column :email,                     :string, :limit => 100
-      t.string :phone_number,              :string
+      t.column :phone_number,              :string
       t.column :class_level,               :integer
       t.column :major,                     :integer
       t.column :active,                    :boolean

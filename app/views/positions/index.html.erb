@@ -1,23 +1,23 @@
 <h1>Listing positions</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table class="datagrid">
+	<thead class="datagrid">
+		<th>Name</th>
+		<th>Description</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</thead>
 
-<% @positions.each do |position| %>
-  <tr>
-    <td><%= position.name %></td>
-    <td><%= position.description %></td>
-    <td><%= link_to 'Show', position %></td>
-    <td><%= link_to 'Edit', edit_position_path(position) %></td>
-    <td><%= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+	<% @positions.each do |position| %>
+	<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+		<td><%= position.name %></td>
+		<td><%= position.description %></td>
+		<td><%= link_to 'Show', position %></td>
+		<td><%= link_to 'Edit', edit_position_path(position) %></td>
+		<td><%= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end %>
 </table>
 
 <br />

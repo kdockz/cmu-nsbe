@@ -15,12 +15,23 @@ $(function() {
 	<h3>&nbsp;<a href="#"><%=h user.nice_name %></a></h3>
 	<div>
 		<table id="users">
-
+			<tr>
+				<td colspan="2">
+				<h2>Member Contact Information</h2>
+				</td>
+			</tr>
+			
 			<tr>
 				<!-- left column -->
-				<td valign="top" width="400">
-					<h2>Member Contact Information</h2>
+				<td valign="top" width="125">
+					<p>
+						<%= image_tag user.photo.url(:medium) %>
+					</p>
 
+				</td>
+
+				<!-- right column -->
+				<td valign="top" width="400">
 					<p>
 						<strong>Email:</strong>
 						<%= user.email %>
@@ -35,19 +46,7 @@ $(function() {
 						<strong>Year:</strong>
 						<%= user.get_class %>
 					</p>
-					
 
-				</td>
-
-				<!-- spacer -->
-				<td width="35">&nbsp;</td>
-
-				<!-- right column -->
-				<td valign="top" width="400">
-					<p>
-						<strong>Photo:</strong>
-						<%= image_tag user.photo.url(:medium) %>
-					</p>
 
 				</td>
 			</tr>

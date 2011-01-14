@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Name:</b>
   <%= @event.name %>
@@ -12,34 +10,28 @@
 
 <p>
   <b>Date:</b>
-	<%= if @event.start_date.nil? and @event.end_date.nil? then '-' 
-	elsif @event.start_date.nil? then @event.end_date.strftime("%B %d, %Y") 
-	elsif @event.end_date.nil? or @event.start_date == @event.end_date then @event.start_date.strftime("%B %d, %Y" ) 
-	else @event.start_date.strftime("%B %d, %Y" ) + ' - ' + @event.end_date.strftime("%B %d, %Y" ) 
-	end %>
+	<%= show_date(@event.start_date, @event.end_date) %>
 </p>
 
 <p>
   <b>Time:</b>
-	<%= if @event.start_time.empty? and @event.end_time.empty? then 'TBD' 
-	elsif @event.start_time.empty? then Chronic::parse(@event.end_time).strftime("%l:%M %p")
-	elsif @event.end_time.empty? or @event.start_time == @event.end_time then Chronic::parse(@event.start_time).strftime("%l:%M %p") 
-	else Chronic::parse(@event.start_time).strftime("%l:%M %p") + " - " + Chronic::parse(@event.end_time).strftime("%l:%M %p")
-	end %>
+	<%= show_time(@event.start_time, @event.end_time) %>
 </p>
-<% if current_user.admin? %>
+<% if logged_in? && current_user.admin? %>
 <p>
   <b>User:</b>
   <%= @event.user.nice_name %>
 </p>
+<% if can? :modify, Event %>
 <p>
   <b>Active:</b>
   <%= @event.active %>
 </p>
 <p>
   <b>Status:</b>
-  <%= @event.status %>
+  <%= @event.get_status %>
 </p>
+<% end %>
 <% end %>
 
 
@@ -68,7 +60,7 @@
 	<% else %>
 		<p><%= button_to "Register", { :controller => 'registrations', :action => 'create' } %></p>
 	<% end %>
-	<% if current_user.admin? %>
+    <% if can? :modify, Event %>
 		<%= link_to 'Edit', edit_event_path(@event) %> |
 		<%= link_to 'Back', events_path %>
 	<% end %>

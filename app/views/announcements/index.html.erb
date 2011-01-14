@@ -1,27 +1,29 @@
 <h1>Listing announcements</h1>
 
-<table>
-  <tr>
-    <th>Content</th>
-    <th>Start date</th>
-    <th>End date</th>
-    <th>Active</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @announcements.each do |announcement| %>
-  <tr>
-    <td><%= announcement.content %></td>
-    <td><%= announcement.start_date %></td>
-    <td><%= announcement.end_date %></td>
-    <td><%= announcement.active %></td>
-    <td><%= link_to 'Show', announcement %></td>
-    <td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
-    <td><%= link_to 'Destroy', announcement, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+<table class="datagrid">
+	<thead class="datagrid">
+		<th>Content</th>
+		<th>Start date</th>
+		<th>End date</th>
+		<th>Active</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</thead>
+
+	<% @announcements.each do |announcement| %>
+	<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+		<td><%= announcement.content %></td>
+		<td><%= announcement.start_date %></td>
+		<td><%= announcement.end_date %></td>
+		<td><%= announcement.active %></td>
+		<td><%= link_to 'Show', announcement %></td>
+		<td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
+		<td><%= button_to "Delete", announcement, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %></td>
+
+	</tr>
+	<% end %>
 </table>
 
 <br />

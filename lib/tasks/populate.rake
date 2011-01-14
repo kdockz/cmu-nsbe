@@ -67,6 +67,7 @@ namespace :db do
       m.login = username[0]
       m.password = "secret"
       m.password_confirmation = "secret"
+      m.access_level = member[6]
       m.save!
 
       #Create them in the position

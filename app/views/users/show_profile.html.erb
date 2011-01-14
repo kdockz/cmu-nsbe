@@ -1,24 +1,30 @@
-<p>
-  <b>Name:</b>
-  <%= @user.nice_name %>
-</p>
+<h1><%= @user.nice_name %></h1>
+<hr />
+<table>
+	<tr>
+		<td>
+			<p>
+			  <%= image_tag @user.photo.url(:medium) %>
+			</p>
+		</td>
+		<td>
+			<p>
+			  <b>Major:</b>
+			  <%= @user.get_major %>
+			</p>
 
-<p>
-  <b>Major:</b>
-  <%= @user.get_major %>
-</p>
-
-<p>
-  <b>Year:</b>
-  <%= @user.get_class %>
-</p>
-
-<p>
-  <b>Biography:</b>
-  <%= @user.biography %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%= @user.photo.url %>
-</p>
+			<p>
+			  <b>Year:</b>
+			  <%= @user.get_class %>
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<p>
+			  <b>Biography:</b>
+			  <%= @user.get_biography %>
+			</p>
+		</td>
+	</tr>
+</table>

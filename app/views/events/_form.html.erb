@@ -1,7 +1,7 @@
 <script>
 	$(function() {
-		$( "#event_start_date" ).datepicker();
-		$( "#event_end_date" ).datepicker();
+		$( "#event_start_date" ).datepicker({ dateFormat: 'dd-mm-yy' });
+		$( "#event_end_date" ).datepicker({ dateFormat: 'dd-mm-yy' });
 	});
 </script>
 
@@ -32,11 +32,11 @@
   </div>
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.text_field :start_date %>
+    <%= f.text_field :start_date, :onchange => "document.getElementById('event_end_date').value = value" %>
   </div>
   <div class="field">
     <%= f.label :end_date %><br />
-    <%= f.text_field :end_date, :as => :datepicker %>
+    <%= f.text_field :end_date %>
   </div>
   <div class="field">
     <%= f.label :start_time %><br />

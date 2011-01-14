@@ -31,6 +31,7 @@ Nsbe::Application.routes.draw do
   match 'contact' => 'home#contact', :as => :contact
   match 'about' => 'home#about', :as => :about
   match 'my_events' => 'home#my_events', :as => :my_events
+  match 'show' => 'home#show', :as => :home_show
   
   
   

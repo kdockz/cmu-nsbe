@@ -6,14 +6,19 @@ class Event < ActiveRecord::Base
   belongs_to :user, :class_name => "User", :foreign_key => "user_id"
   
   # Array
-  STATUS = [['Upcoming', 0], ['Complete', 1]]
+  STATUS = [['Upcoming', 0], ['Ongoing', 1], ['Complete', 2]]
+  
+  attr_accessible :start_date, :end_date, :start_time, :end_time
   
   # Validations
   validates_presence_of :name, :location, :description, :user_id
   validates_inclusion_of :user_id, :in => User.all.map{|u| u.id }
   
   # Scopes
-  
+  scope :upcoming, where('start_date > ?', Date.today)
+  scope :ongoing, where('status = ?', 1)
+  scope :completed, where('status = ?', 2)
+  scope :today, where('start_date = ?', Date.today)
 
   # Methods
   def get_status

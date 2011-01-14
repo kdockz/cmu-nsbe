@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.string   "last_name",                 :limit => 100
     t.string   "email",                     :limit => 100
     t.string   "phone_number"
-    t.string   "string"
     t.integer  "class_level"
     t.integer  "major"
     t.boolean  "active"
