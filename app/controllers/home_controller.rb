@@ -11,7 +11,7 @@ class HomeController < ApplicationController
     @users = User.all
   end
 
-  def officers
+  def chapter
     @zones = Zone.all
   end
 

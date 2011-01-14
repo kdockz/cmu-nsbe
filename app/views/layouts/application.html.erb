@@ -69,36 +69,12 @@
 		<div id="header">
 			<div id="navigation">
 				<ul id="menu">
-					<li class="menu">
-						<%= link_to(root_url) do %>
-					    	Home<br /><%= image_tag('nav/home.png') %>
-						<% end %>
-					</li>  	
-					<li class="menu">	
-						<%= link_to(events_path) do %>
-					    	Events<br /><%= image_tag('nav/events.png') %>
-					  	<% end %>
-					</li>
-					<li class="menu">
-						<%= link_to(directory_path) do %>
-					    	Directory<br /><%= image_tag('nav/directory.png') %>
-					  	<% end %>
-					</li>
-					<li class="menu">
-						<%= link_to(officers_path) do %>
-					    	Officers<br /><%= image_tag('nav/officers.png') %>
-					  	<% end %>
-					</li>
-					<li class="menu">
-						<%= link_to(contact_path) do %>
-					    	Contact<br /><%= image_tag('nav/contact.png') %>
-					  	<% end %>
-					</li>
-					<li class="menu">
-						<%= link_to(about_path) do %>
-					    	About<br /><%= image_tag('nav/about.png') %>
-					  	<% end %>
-					</li>
+					<%= make_link "Home", root_url, "nav/home.png" %>
+					<%= make_link "Events", events_path, "nav/events.png" %>
+					<%= make_link "Directory", directory_path, "nav/directory.png" %>
+					<%= make_link "Chapter", chapter_path, "nav/officers.png" %>
+					<%= make_link "Contact", contact_path, "nav/contact.png" %>
+					<%= make_link "About", about_path, "nav/about.png" %>
 				</ul>
 			</div>
 		</div>

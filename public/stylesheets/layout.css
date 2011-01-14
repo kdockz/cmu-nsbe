@@ -99,6 +99,16 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 3px;
 	border: 0;
 }
+#navigation ul .selected {
+	background-color: #FFFFFF;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+}
+#navigation ul .selected a  {
+	text-decoration: none;
+	background-color: #FFF;
+	color: #8A0808;
+}
 #login-container {
 	-webkit-border-radius: 9px;
 	-moz-border-radius: 9px;

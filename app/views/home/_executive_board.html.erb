@@ -1,0 +1,49 @@
+<table width="100%" cellspacing="0" cellpadding="0"> 
+	<tr> 
+		<td align="center" border="2"><br> 
+			<%= image_tag("tech.jpg") %>
+			<hr color="#660000" size="2" width="90%"> 
+		</td> 
+	</tr> 
+	<tr> 
+		<td valign="top" align="center"> 
+			<br>	
+			<table bgcolor="white" width="90%" height="300" cellPadding="0" cellSpacing="0" border="0" align="center"> 
+				<tr> 
+					<td colspan="3" bgcolor="#660000" valign="top" height="230"> 
+						<table id="contact_information" border="0" width="100%" cellPadding="3" cellSpacing="1"> 
+							<tr> 
+								<td>Position</td> 
+								<td>Name</td> 
+								<td>Email</td> 
+							</tr> 
+							<% @zones.each do |z| %>
+							<tr class="zones"> 
+								<td colspan="3"><%= z.name %></td> 
+							</tr> 
+							<% @positions = Position.by_zone(z.id) %>
+							<% @positions.each do |p| %>
+							<% @members = PositionMember.by_position(p.id).active %>
+							<% @members.each do |m| %>
+							<tr class="members"> 
+								<td><%= link_to(m.position.name, position_path(m.position)) %></td> 
+								<td><%= link_to(m.user.nice_name, show_profile_path(m.user.id)) %></td> 
+								<td><%= m.position.email %></td> 
+							</tr> 
+							<% end %>
+							<% end %>
+							<% end %>
+						</table> 
+					</td> 
+				</tr> 
+			</table> 
+		</td> 
+	</tr> 
+	<tr> 
+		<td align="center" border="2">				
+			<hr color="#660000" size="2" width="90%"> 
+			<p align="center"><a href="#" onclick="history.go(-1);return false;" class="continue">Back</a></p> 
+
+		</td> 
+	</tr> 
+</table>
