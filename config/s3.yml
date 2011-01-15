@@ -1,0 +1,14 @@
+development:
+  bucket: nsbedevelopment
+  access_key_id: AKIAJN6LSZ2P2IA3S7ZA
+  secret_access_key: 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
+
+test:
+  bucket: nsbetest
+  access_key_id: AKIAJN6LSZ2P2IA3S7ZA
+  secret_access_key: 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
+
+production:
+  bucket: nsbe
+  access_key_id: AKIAJN6LSZ2P2IA3S7ZA
+  secret_access_key: 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
