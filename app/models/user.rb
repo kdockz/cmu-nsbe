@@ -48,9 +48,10 @@ class User < ActiveRecord::Base
   # validates_attachment_presence :photo                    
   # validates_attachment_size :photo, :less_than=>2.megabyte
   # validates_attachment_content_type :photo, :content_type=>['image/jpeg', 'image/png', 'image/gif']
-  validates_presence_of :first_name, :last_name, :class_level, :major
-  validates_inclusion_of :class_level, :in => CLASS_LEVELS.map{|key, value| value }
-  validates_inclusion_of :major, :in => MAJORS.map{|key, value| value }
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
+  validates :class_level, :presence => true, :inclusion => { :in => CLASS_LEVELS.map{ |key, value| value } }
+  validates :major, :presence => true, :inclusion => { :in => MAJORS.map{|key, value| value } }
 
   # Scopes
 

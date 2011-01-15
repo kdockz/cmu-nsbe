@@ -8,14 +8,19 @@ class Event < ActiveRecord::Base
   # Array
   STATUS = [['Upcoming', 0], ['Ongoing', 1], ['Complete', 2]]
   
-  attr_accessible :start_date, :end_date, :start_time, :end_time
+  attr_accessible :name, :location, :description, :registration, :capacity, :user_id, :start_date, :end_date, :start_time, :end_time
   
   # Validations
-  validates_presence_of :name, :location, :description
   validates :name, :presence => true
   validates :location, :presence => true
   validates :description, :presence => true
-  validates_inclusion_of :user_id, :in => User.all.map{|u| u.id }
+  validates :registration, :presence => true
+  validates :capacity, :presence => true, :allow_nil => true
+  validates :start_date, :presence => true, :allow_nil => true
+  validates :end_date, :presence => true, :allow_nil => true
+  validates :start_time, :presence => true, :allow_nil => true
+  validates :end_time, :presence => true, :allow_nil => true
+  validates :user_id, :presence => true, :inclusion => { :in => User.all.map{ |u| u.id } }
   
   # Scopes
   scope :upcoming, where('start_date > ?', Date.today)
