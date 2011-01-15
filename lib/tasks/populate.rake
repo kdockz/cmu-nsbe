@@ -63,7 +63,7 @@ namespace :db do
       m.major = member[3]
       m.class_level = member[4]
       if (member.size == 8)
-        m.photo = File.open("#{RAILS_ROOT}/lib/tasks/officers/#{member[7]}")
+        m.photo = File.open("#{RAILS_ROOT}/public/temp/officers/#{member[7]}")
       end
       m.active = true
       username = member[2].split('@')
