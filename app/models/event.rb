@@ -14,12 +14,7 @@ class Event < ActiveRecord::Base
   validates :name, :presence => true
   validates :location, :presence => true
   validates :description, :presence => true
-  validates :registration, :presence => true
-  validates :capacity, :presence => true, :allow_nil => true
-  validates :start_date, :presence => true, :allow_nil => true
-  validates :end_date, :presence => true, :allow_nil => true
-  validates :start_time, :presence => true, :allow_nil => true
-  validates :end_time, :presence => true, :allow_nil => true
+  validates :registration, :inclusion => { :in => [true, false] }
   validates :user_id, :presence => true, :inclusion => { :in => User.all.map{ |u| u.id } }
   
   # Scopes
