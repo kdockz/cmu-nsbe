@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   # Relationships
   has_many :registrations
   has_many :users, :through => :registrations
-  belongs_to :user, :class_name => "User", :foreign_key => "user_id"
+  belongs_to :user
   
   # Array
   STATUS = [['Upcoming', 0], ['Ongoing', 1], ['Complete', 2]]
@@ -11,7 +11,10 @@ class Event < ActiveRecord::Base
   attr_accessible :start_date, :end_date, :start_time, :end_time
   
   # Validations
-  validates_presence_of :name, :location, :description, :user_id
+  validates_presence_of :name, :location, :description
+  validates :name, :presence => true
+  validates :location, :presence => true
+  validates :description, :presence => true
   validates_inclusion_of :user_id, :in => User.all.map{|u| u.id }
   
   # Scopes

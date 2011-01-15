@@ -48,7 +48,6 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     
     @event.user_id = current_user.id
-    
     @event.active = true
     
     respond_to do |format|
