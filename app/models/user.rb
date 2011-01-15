@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   has_many :positions, :through => :position_members
   has_many :registrations
   has_many :events, :through => :registrations
-  has_attached_file :photo, :styles => { :medium => "100x100>", :thumb => "50x50>" }, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
+  has_attached_file :photo, :styles => { :medium => "100x100>", :thumb => "50x50>" }, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => "/:style/:filename"
   
   # Note - User levels will be defined as follows:
   # 10 - NSBE Chapter and/or National Member
