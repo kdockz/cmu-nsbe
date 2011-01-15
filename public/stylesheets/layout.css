@@ -1,5 +1,5 @@
 html {
-	background-color: #8A0808;
+	background-color: #9a0000;
 }
 body {
 	font-family: Sans-Serif;
@@ -51,6 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+}
+#logo {
+	position: absolute;
+	top: 0;
+	left: 35px;
 }
 #navigation {
 	width: 100%;

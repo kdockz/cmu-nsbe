@@ -1,14 +1,14 @@
-Libby:Adams:eladams@andrew.cmu.edu:9:3:Chapter President:50
+Libby:Adams:eladams@andrew.cmu.edu:9:3:Chapter President:50:libby.jpg
 Evan:Moss:ewm@andrew.cmu.edu:12:1:Membership Chair:30
-Alissa:Ebong:aie@andrew.cmu.edu:10:1:Conference Planning Co-Chair:30
-Shanel:Buchanan:sbuchana@andrew.cmu.edu:0:3:Chapter Treasurer:30
-Nicole:Ifill:nri@cmu.edu:9:2:Conference Planning Co-Chair:30
-Bryan:Lewis:bmlewis@andrew.cmu.edu:5:1:Co-Corporate Liason:30
-Ryan:Sanders:rjsander@andrew.cmu.edu:9:3:Co-Corporate Liason:50
-Kamal:Ibrahim:kibrahim@andrew.cmu.edu:11:3:Fundraising Chair:30
-DeVynne:Farquharson:dfarquha@andrew.cmu.edu:12:1:Programs Chair:30
-Brandon:Tyson:betyson@andrew.cmu.edu:9:3:Academic Excellence Chair:30
-Blake:Anderson:sbanders@andrew.cmu.edu:11:1:Pre-College Initiative Chair:30
-Samantha:Mitchual:smitchua@andrew.cmu.edu:9:2:Chapter Secretary:30
-Manny:Sampson:dsampson@andrew.cmu.edu:5:1:Publicity Chair:30
+Alissa:Ebong:aie@andrew.cmu.edu:10:1:Conference Planning Co-Chair:30:alissa.jpg
+Shanel:Buchanan:sbuchana@andrew.cmu.edu:0:3:Chapter Treasurer:30:shanel.jpg
+Nicole:Ifill:nri@cmu.edu:9:2:Conference Planning Co-Chair:30:nicole.jpg
+Bryan:Lewis:bmlewis@andrew.cmu.edu:5:1:Co-Corporate Liason:30:bryan.jpg
+Ryan:Sanders:rjsander@andrew.cmu.edu:9:3:Co-Corporate Liason:50:ryan.jpg
+Kamal:Ibrahim:kibrahim@andrew.cmu.edu:11:3:Fundraising Chair:30:kamal.jpg
+DeVynne:Farquharson:dfarquha@andrew.cmu.edu:12:1:Programs Chair:30:devynne.jpg
+Brandon:Tyson:betyson@andrew.cmu.edu:9:3:Academic Excellence Chair:30:brandon.jpg
+Blake:Anderson:sbanders@andrew.cmu.edu:11:1:Pre-College Initiative Chair:30:blake.jpg
+Samantha:Mitchual:smitchua@andrew.cmu.edu:9:2:Chapter Secretary:30:samantha.jpg
+Manny:Sampson:dsampson@andrew.cmu.edu:5:1:Publicity Chair:30:manny.jpg
 Karl:Dockery:karl@cmu.edu:9:3:Telecommunications Chair:50

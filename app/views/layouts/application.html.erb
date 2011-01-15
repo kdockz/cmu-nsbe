@@ -67,6 +67,13 @@
 	</div>
 	<div id="container">
 		<div id="header">
+			
+			<div id="logo">
+				<%= image_tag 'nsbe.gif', :width => 150 %>
+				<br />
+				<%= image_tag 'cmu.gif', :width => 150 %>
+			</div>
+			
 			<div id="navigation">
 				<ul id="menu">
 					<%= make_link "Home", root_url, "nav/home.png" %>
@@ -77,23 +84,26 @@
 					<%= make_link "About", about_path, "nav/about.png" %>
 				</ul>
 			</div>
+			
 		</div>
+		
 		<%= show_flash_message(:fade => 10) %>
+		
 		<div id="content">
-			<script>
-			$(function() {
-				$( "#reset_password_box" ).dialog({ autoOpen: false });
-			});
+				<script>
+				$(function() {
+					$( "#reset_password_box" ).dialog({ autoOpen: false });
+				});
 				
-			$(".resetpassword").click(function(e) {
-				e.preventDefault();
-				if ($( "#reset_password_box" ).dialog("isOpen") == true) {
-					$( "#reset_password_box" ).dialog('close');						
-				} else {
-					$( "#reset_password_box" ).dialog("open");
-				}
-			});
-			</script>
+				$(".resetpassword").click(function(e) {
+					e.preventDefault();
+					if ($( "#reset_password_box" ).dialog("isOpen") == true) {
+						$( "#reset_password_box" ).dialog('close');						
+					} else {
+						$( "#reset_password_box" ).dialog("open");
+					}
+				});
+				</script>
 			<div id="reset_password_box">
 			<%= form_tag '/reset_password' do %>
 
