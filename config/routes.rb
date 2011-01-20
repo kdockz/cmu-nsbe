@@ -23,7 +23,6 @@ Nsbe::Application.routes.draw do
   match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
   
   # Home Related Routes
-  get "home/index"
   root :to => 'home#index'
   match 'home' => 'home#index', :as => :home
   match 'directory' => 'home#directory', :as => :directory
@@ -31,10 +30,6 @@ Nsbe::Application.routes.draw do
   match 'contact' => 'home#contact', :as => :contact
   match 'about' => 'home#about', :as => :about
   match 'my_events' => 'home#my_events', :as => :my_events
-  match 'show' => 'home#show', :as => :home_show
-  
-  
-  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

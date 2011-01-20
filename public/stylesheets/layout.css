@@ -45,21 +45,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header {
-	width: 900px;
-	padding-top: 25px;
-	display: block;
+	min-width: 0px;
+	width: 1005px;
+	max-width: 1200px;
+	position: relative;
+}
+#header #logo {
+	left: 5%;
+	position: absolute;
+}
+#header #logo2 {
+	position: absolute;
+	top: 20px;
+	left: 1%;
+}
+#header #logo2 .logo_text {
 	text-align: center;
-	margin-left: auto;
+	margin-left: 50px;
 	margin-right: auto;
 }
-#logo {
+
+#header #banner {
+	left: 25%;
+	top: 15px;
 	position: absolute;
-	top: 0;
-	left: 35px;
+	min-width: 695px;
+	width: 900px;
+	max-width: 900px;
+}
+#header #banner img {
+	border: solid 7px #FFF;
+}
+#main {
+	position: relative;
+	top: 135px;
 }
 #navigation {
 	width: 100%;
 	overflow: hidden;
+	position: relative;
 }
 #navigation ul {
 	position: relative;
@@ -72,7 +96,9 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	float: left;
 	right: 50%;
+	margin-left: auto;
 	margin-right: auto;
+	text-align:  center;
 	padding-left: 25px;
 	padding-right: 25px;
 	font-family: Verdana;
@@ -127,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 	right: 15px;
 	z-index: 5;
 	-webkit-transition: bottom 0.5s linear;
-    -moz-transition: bottom 0.5s linear;
+	-moz-transition: bottom 0.5s linear;
 }
 #login-container #signin_menu {
 	position: relative;
@@ -145,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-border-radius: 9px;
 	-moz-border-radius: 9px;
 	background-color: #000;
-		text-align: center;
+	text-align: center;
 	float: left;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -160,7 +186,6 @@ h1, h2, h3, h4, h5, h6 {
 	cursor: pointer;
 }
 #content {
-	clear: both;
 	position: relative;
 	margin-top: 15px;
 	margin-bottom: 25px;
@@ -290,11 +315,13 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
-#home_table td {
+#home_table tr td {
 	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 #reset_password_box {
 	display: none;

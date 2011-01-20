@@ -2,11 +2,9 @@
 <html>
 <head>
 	<title>Carnegie Mellon :: National Society of Black Engineers</title>
-	<%= stylesheet_link_tag 'layout', 'jquery-ui-1.8.7.custom', 'datagrid' %>
-	<%= javascript_include_tag 'jquery-1.4.4.min', 'jquery-ui-1.8.7.custom.min', 'application', 'rails' %>
+	<%= stylesheet_link_tag 'layout', 'jquery-ui-1.8.7.custom', 'datagrid', 'nivo-slider' %>
+	<%= javascript_include_tag 'jquery-1.4.4.min', 'jquery-ui-1.8.7.custom.min', 'application', 'jquery.nivo.slider.pack' %>
 	<%= csrf_meta_tag %>
-
-
 </head>
 <body>
 	<script>
@@ -66,14 +64,26 @@
 
 	</div>
 	<div id="container">
+		<% @number = rand(2) %>
 		<div id="header">
-			
+			<% if (@number == 0) %>
 			<div id="logo">
-				<%= image_tag 'nsbe.gif', :width => 150 %>
+				<%= image_tag 'nsbe2.gif', :width => 125 %>
 				<br />
-				<%= image_tag 'cmu.gif', :width => 150 %>
+				<%= image_tag 'cmu.png', :width => 125 %>
 			</div>
-			
+			<% else %>
+			<div id="logo2">
+				<%= image_tag 'about-nsbe2.png', :width => 225, :class => "logo" %>				
+				<br />
+				<%= image_tag 'cmu.png', :width => 125, :class => "logo_text" %>
+			</div>
+			<% end %>
+			<div id="banner">
+				<%= image_tag 'cmu_banner_panorama.jpg', :width => 900 %>
+			</div>
+		</div>
+		<div id="main">
 			<div id="navigation">
 				<ul id="menu">
 					<%= make_link "Home", root_url, "nav/home.png" %>
@@ -84,17 +94,15 @@
 					<%= make_link "About", about_path, "nav/about.png" %>
 				</ul>
 			</div>
-			
-		</div>
-		
-		<%= show_flash_message(:fade => 10) %>
-		
-		<div id="content">
+
+			<%= show_flash_message(:fade => 10) %>
+
+			<div id="content">
 				<script>
 				$(function() {
 					$( "#reset_password_box" ).dialog({ autoOpen: false });
 				});
-				
+
 				$(".resetpassword").click(function(e) {
 					e.preventDefault();
 					if ($( "#reset_password_box" ).dialog("isOpen") == true) {
@@ -104,18 +112,19 @@
 					}
 				});
 				</script>
-			<div id="reset_password_box">
-			<%= form_tag '/reset_password' do %>
+				<div id="reset_password_box">
+					<%= form_tag '/reset_password' do %>
 
-			<p><label for="email">Email</label><br/>
-			<%= text_field_tag :email, params[:email] %></p>
+					<p><label for="email">Email</label><br/>
+						<%= text_field_tag :email, params[:email] %></p>
 
-			<%= submit_tag 'Reset password' %>
+						<%= submit_tag 'Reset password' %>
 
-			<% end %>
+						<% end %>
+					</div>
+					<%= yield %>
+				</div>
 			</div>
-			<%= yield %>
-		</div>
 
 		<div id="footer"></div>
 	</div>
