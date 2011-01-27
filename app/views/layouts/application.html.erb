@@ -69,13 +69,13 @@
 			<% if (@number == 0) %>
 			<div id="logo">
 				
-				<%= raw(link_to(image_tag('nsbe2.gif', :width => 125), root_url)) %>
+				<%= raw(link_to(image_tag('nsbe2.gif', :width => 125, :border => 0), root_url)) %>
 				<br />
 				<%= image_tag 'cmu.png', :width => 125 %>
 			</div>
 			<% else %>
 			<div id="logo2">
-				<%= raw(link_to(image_tag('about-nsbe2.png', :width => 225, :class => "logo"), root_url)) %>				
+				<%= raw(link_to(image_tag('about-nsbe2.png', :width => 225, :border => 0, :class => "logo"), root_url)) %>				
 				<br />
 				<%= image_tag 'cmu.png', :width => 125, :class => "logo_text" %>
 			</div>
