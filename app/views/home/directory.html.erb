@@ -14,7 +14,7 @@ $(function() {
 	<% @users.each do |user| %>
 	<h3>&nbsp;<a href="#"><%=h user.nice_name %></a></h3>
 	<div>
-		<table id="users">
+		<table class="users">
 			<tr>
 				<td colspan="2">
 				<h2>Member Contact Information</h2>
@@ -23,7 +23,7 @@ $(function() {
 			
 			<tr>
 				<!-- left column -->
-				<td valign="top" width="125">
+				<td valign="top" width="125" class="directory_picture">
 					<p>
 						<%= image_tag user.photo.url(:medium) %>
 					</p>

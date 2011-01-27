@@ -68,13 +68,14 @@
 		<div id="header">
 			<% if (@number == 0) %>
 			<div id="logo">
-				<%= image_tag 'nsbe2.gif', :width => 125 %>
+				
+				<%= raw(link_to(image_tag('nsbe2.gif', :width => 125), root_url)) %>
 				<br />
 				<%= image_tag 'cmu.png', :width => 125 %>
 			</div>
 			<% else %>
 			<div id="logo2">
-				<%= image_tag 'about-nsbe2.png', :width => 225, :class => "logo" %>				
+				<%= raw(link_to(image_tag('about-nsbe2.png', :width => 225, :class => "logo"), root_url)) %>				
 				<br />
 				<%= image_tag 'cmu.png', :width => 125, :class => "logo_text" %>
 			</div>
