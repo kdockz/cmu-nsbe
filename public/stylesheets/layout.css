@@ -338,3 +338,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 5px;
 	margin-bottom: 10px;
 }
+.users .directory_picture {
+	border: 3px solid #000000;
+}
