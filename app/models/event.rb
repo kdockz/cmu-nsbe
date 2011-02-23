@@ -22,6 +22,7 @@ class Event < ActiveRecord::Base
   scope :ongoing, where('status = ?', 1)
   scope :completed, where('status = ?', 2)
   scope :today, where('start_date = ?', Date.today)
+  scope :past, where('end_date < ?', Date.today)
 
   # Methods
   def get_status

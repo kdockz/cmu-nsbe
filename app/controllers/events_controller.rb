@@ -5,7 +5,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.all
+    @events = Event.upcoming
+    @past_events = Event.past
     session[:event] = nil
 
     respond_to do |format|

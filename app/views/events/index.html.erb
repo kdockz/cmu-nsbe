@@ -5,17 +5,14 @@
 <% end %>
 <h1>Listing events</h1>
 
-
-<iframe src="http://www.google.com/calendar/embed?src=vk5lct3r5vkhgombvpdqut5t7g%40group.calendar.google.com&ctz=America/New_York" style="border: 0; text-align: center; margin-left: auto; margin-right: auto;" width="800" height="600" frameborder="0" scrolling="no"></iframe>	
-
+<h2>Upcoming Events</h2>
 <table class="datagrid">
   <thead class="datagrid">
     <th>Name</th>
     <th>Location</th>
     <th>Date</th>
     <th>Time</th>
-    <th>User</th>
-    <th>Status</th>
+    <th>Photos</th>
   <% if can? :modify, Event %>
 	    <th></th>
 	    <th></th>
@@ -32,18 +29,38 @@
 	<td>
 		<%= show_time(event.start_time, event.end_time) %>
 	</td>
-    <td><%= event.user.nice_name %></td>
-    <td><%= event.get_status %></td>
-
+	<td>
+		&nbsp;
+	</td>
   <% if can? :modify, event %>
     	<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_event_path(event) %></td>
-		<td><%= button_to "Delete", event, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %></td>
+		<td><%= button_to "Delete", event, :method => :delete, :class => :destroy, :confirm => "Are you sure?" %></td>
 	<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
+
+<h2>Past Events</h2>
+<table class="datagrid">
+  <thead class="datagrid">
+    <th>Name</th>
+    <th>Photos</th>
+  <% if can? :modify, Event %>
+	    <th></th>
+	    <th></th>
+	<% end %>
+  </thead>
+
+<% @past_events.each do |event| %>
+  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+    <td><%= link_to event.name, event %></td>
+    <td>&nbsp;</td>
+  </tr>
+<% end %>
+</table>
+
 <% if can? :create, Event %>
 	<%= link_to 'New Event', new_event_path %>
 <% end %>
