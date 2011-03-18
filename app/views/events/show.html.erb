@@ -3,7 +3,7 @@
 		<td>
 			<h2>Details for <em><%= @event.name %></em>:</h2>
 			<hr />
-			<h3><%= @event.description %></h3>
+			<h3 id="event-description"><%= @event.description %></h3>
 			<h3 class="event-info"><em>Important Information:</em></h3>
 			<p>
 				This event is scheduled for <strong><%= show_date(@event.start_date, @event.end_date) %></strong>.
@@ -85,18 +85,18 @@
 
 			<% @registered_users.each do |ru| %>
 			  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
-				<% if (logged_in? && ru.user.nice_name == current_user.nice_name) %>
+			  	<% if (logged_in? && ru.user.nice_name == current_user.nice_name) %>
 			    <td><%= link_to raw("<strong>#{ru.user.nice_name}</strong> (You)"),  show_profile_path(ru.user.id) %></td>
-			   <% else %>
+			   	<% else %>
 			    <td><%= link_to ru.user.nice_name,  show_profile_path(ru.user.id) %></td>
-			   <% end %>
-			  <td>
-			  <% if can? :modify, ru %>
+			   	<% end %>
+			  	<td>
+			  	<% if can? :modify, ru %>
 			    <%= button_to "Unregister", ru, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %>
-			  <% else  %>
+			  	<% else  %>
 				&nbsp;
-			  <% end %>
-			  </td>
+			  	<% end %>
+			  	</td>
 			  </tr>
 			<% end %>
 			</table>

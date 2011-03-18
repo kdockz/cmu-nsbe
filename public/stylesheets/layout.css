@@ -355,3 +355,6 @@ h1, h2, h3, h4, h5, h6 {
 .event-info {
 	color: #9a0000;
 }
+#event-description {
+	width: 400px;
+}
