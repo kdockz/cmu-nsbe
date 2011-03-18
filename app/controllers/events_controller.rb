@@ -20,7 +20,8 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     session[:event] = @event
-
+    @registered_users = Registration.for_event(@event.id)
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @event }

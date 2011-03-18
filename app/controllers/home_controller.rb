@@ -2,7 +2,6 @@ class HomeController < ApplicationController
   def index
     session[:event] = nil
     @announcements = Announcement.all
-    @todays_events = Event.today
     @upcoming_events = Event.upcoming
   end
 

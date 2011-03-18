@@ -29,6 +29,20 @@ $(window).load(function() {
 <table id="home_table">
 	<tr>
 		<td colspan="2">
+				<div class="announcement_content">
+					<h2>News & Announcements</h2>
+					<% if !@announcements.empty? %>
+					<ul>
+						<% for announcement in @announcements %>
+						<li><%= announcement.content %></li><br />
+						<% end %>
+					</ul>
+					<% else %>
+					<ul>
+						<li>No recent announcements to display.</li>
+					</ul>
+					<% end %>
+				</div>
 			<div id="slider">
 				<%= image_tag 'nsbe1.jpg', :width => 300 %>
 				<%= image_tag 'nsbe2.jpg', :width => 300 %>
@@ -38,20 +52,7 @@ $(window).load(function() {
 	</tr>
 	<tr>
 		<td>
-			<div class="announcement_content">
-				<h2>Friendly Reminders</h2>
-				<% if !@announcements.empty? %>
-				<ul>
-					<% for announcement in @announcements %>
-					<li><%= h announcement.content %></li><br />
-					<% end %>
-				</ul>
-				<% else %>
-				<ul>
-					<li>No recent announcements to display.</li>
-				</ul>
-				<% end %>
-			</div>
+		<%= render :partial => 'events/upcoming_events' %>
 		</td>
 		<td rowspan="2">
 			<div id = "twitter">

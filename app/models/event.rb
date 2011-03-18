@@ -33,8 +33,13 @@ class Event < ActiveRecord::Base
   end
   
   def free_space?
-    return false if self.capacity.nil?
-    return true if Registration.for_event(id).size < capacity
+    return true if !capacity.nil? && Registration.for_event(id).size < capacity
+    return true if capacity.nil? && registration == true
+    false
+  end
+  
+  def public?
+    return true if self.capacity.nil? && self.registration == false
     false
   end
   

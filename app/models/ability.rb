@@ -31,11 +31,13 @@ class Ability
       can :manage, :all
     else
       can :read, :all
+      can :modify, Registration, :user_id => user.id
     end
     
     if user.eboard_member?
       can :modify, Event, :user_id => user.id
       can :create, Event
     end
+    
   end
 end

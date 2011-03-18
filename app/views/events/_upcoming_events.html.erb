@@ -1,22 +1,22 @@
-<div class="events_content">
-	<h2>Upcoming Events</h2>
-	<% if !@upcoming_events.empty? %>
-	<ul>
-		<% for event in @upcoming_events %>
-		<li><%= link_to event.name, event %> (<strong><%= if event.start_date.nil? and event.end_date.nil? then '-' 
-		elsif event.start_date.nil? then event.end_date.strftime("%B %d, %Y") 
-		elsif event.end_date.nil? or event.start_date == event.end_date then event.start_date.strftime("%B %d, %Y" ) 
-		else event.start_date.strftime("%B %d, %Y" ) + ' - ' + event.end_date.strftime("%B %d, %Y" ) 
-		end %></strong> at <strong><%= if (event.start_time.empty? || event.start_time.nil?) and (event.end_time.empty? || event.end_time.nil?) then 'TBD' 
-		elsif (event.start_time.empty? || event.start_time.nil?) then Chronic::parse(event.end_time).strftime("%l:%M %p")
-		elsif (event.end_time.empty? || event.end_time.nil?) or event.start_time == event.end_time then Chronic::parse(event.start_time).strftime("%l:%M %p") 
-		else Chronic::parse(event.start_time).strftime("%l:%M %p") + " - " + Chronic::parse(event.end_time).strftime("%l:%M %p")
-		end %></strong>)</li><br />
-		<% end %>
-	</ul>
-	<% else %>
-	<ul>
-		<li>No upcoming events.</li>
-	</ul>
-	<% end %>
-</div>
+<h2>Upcoming Events</h2>
+<table class="datagrid">
+  <thead class="datagrid">
+    <th>Name</th>
+    <th>Location</th>
+    <th>Date</th>
+    <th>Time</th>
+  </thead>
+
+<% @upcoming_events.each do |event| %>
+  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+    <td><%= link_to event.name, event %></td>
+    <td><%= event.location %></td>
+	<td>
+		<%= show_date(event.start_date, event.end_date) %>
+	</td>
+	<td>
+		<%= show_time(event.start_time, event.end_time) %>
+	</td>
+  </tr>
+<% end %>
+</table>
