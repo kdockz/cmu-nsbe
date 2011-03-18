@@ -75,31 +75,35 @@
 		</td>
 		
 		<td>
-			<table id="user-listing" class="datagrid">
-			  <thead class="datagrid">
-			    <th>Registered Users</th>
-			  <% if can? :modify, Registration %>
-			    <th></th>
-			  <% end %>
-			  </thead>
+			<% unless @registered_users.empty? %>
+				<table id="user-listing" class="datagrid">
+				  <thead class="datagrid">
+				    <th>Registered Users</th>
+				  <% if can? :modify, Registration %>
+				    <th></th>
+				  <% end %>
+				  </thead>
 
-			<% @registered_users.each do |ru| %>
-			  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
-			  	<% if (logged_in? && ru.user.nice_name == current_user.nice_name) %>
-			    <td><%= link_to raw("<strong>#{ru.user.nice_name}</strong> (You)"),  show_profile_path(ru.user.id) %></td>
-			   	<% else %>
-			    <td><%= link_to ru.user.nice_name,  show_profile_path(ru.user.id) %></td>
-			   	<% end %>
-			  	<td>
-			  	<% if can? :modify, ru %>
-			    <%= button_to "Unregister", ru, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %>
-			  	<% else  %>
-				&nbsp;
-			  	<% end %>
-			  	</td>
-			  </tr>
+				<% @registered_users.each do |ru| %>
+				  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+				  	<% if (logged_in? && ru.user.nice_name == current_user.nice_name) %>
+				    <td><%= link_to raw("<strong>#{ru.user.nice_name}</strong> (You)"),  show_profile_path(ru.user.id) %></td>
+				   	<% else %>
+				    <td><%= link_to ru.user.nice_name,  show_profile_path(ru.user.id) %></td>
+				   	<% end %>
+				  	<td>
+				  	<% if can? :modify, ru %>
+				    <%= button_to "Unregister", ru, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %>
+				  	<% else  %>
+					&nbsp;
+				  	<% end %>
+				  	</td>
+				  </tr>
+				<% end %>
+				</table>
+			<% else %>
+				<h2><em>There are no users registered for this event.</em></h2>
 			<% end %>
-			</table>
 		</td>
 	</tr>
 </table>
