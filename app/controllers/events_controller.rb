@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   def index
     
     # Grab upcoming events only.
-    @events = Event.all
+    @events = Event.upcoming
     
     #Grab past events.
     @past_events = Event.past
