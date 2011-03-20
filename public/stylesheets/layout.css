@@ -352,9 +352,30 @@ h1, h2, h3, h4, h5, h6 {
 #user-listing {
 	margin-left: 50px;
 }
+
 .event-info {
 	color: #9a0000;
 }
+
 #event-description {
 	width: 400px;
+}
+
+#events-header .title {
+	display: inline;
+}
+
+#calendar {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#events {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#events table {
+	margin-left: auto;
+	margin-right: auto;
 }

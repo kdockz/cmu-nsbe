@@ -1,0 +1,57 @@
+<div id="events">
+	<h2>Upcoming Events</h2>
+	<table class   = "datagrid">
+		<thead class = "datagrid">
+			<th>Name</th>
+			<th>Location</th>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Photos</th>
+			<% if can? :modify, Event %>
+			<th></th>
+			<th></th>
+			<% end %>
+		</thead>
+
+		<% @events.each do |event| %>
+		<tr class    = "<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+			<td><%= link_to event.name, event %></td>
+			<td><%= event.location %></td>
+			<td>
+				<%= show_date(event.start_date, event.end_date) %>
+			</td>
+			<td>
+				<%= show_time(event.start_time, event.end_time) %>
+			</td>
+			<td>
+				&nbsp;
+			</td>
+			<% if can? :modify, event %>
+			<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_event_path(event) %></td>
+			<td><%= button_to "Delete", event, :method => :delete, :class => :destroy, :confirm => "Are you sure?" %></td>
+			<% end %>
+		</tr>
+		<% end %>
+	</table>
+
+	<br />
+
+	<h2>Past Events</h2>
+	<table class   = "datagrid">
+		<thead class = "datagrid">
+			<th>Name</th>
+			<th>Photos</th>
+			<% if can? :modify, Event %>
+			<th></th>
+			<th></th>
+			<% end %>
+		</thead>
+
+		<% @past_events.each do |event| %>
+		<tr class    = "<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+			<td><%= link_to event.name, event %></td>
+			<td>&nbsp;</td>
+		</tr>
+		<% end %>
+	</table>
+</div>

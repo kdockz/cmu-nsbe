@@ -1,66 +1,23 @@
-
+<script>
+$(function() {
+	$( "#tabs" ).tabs();
+});
+</script>
 
 <% if logged_in? %>
 	<p>See my <%= link_to 'registrations', my_events_path %>.</p>
 <% end %>
-<h1>Listing events</h1>
-
-<h2>Upcoming Events</h2>
-<table class="datagrid">
-  <thead class="datagrid">
-    <th>Name</th>
-    <th>Location</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Photos</th>
-  <% if can? :modify, Event %>
-	    <th></th>
-	    <th></th>
-	<% end %>
-  </thead>
-
-<% @events.each do |event| %>
-  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
-    <td><%= link_to event.name, event %></td>
-    <td><%= event.location %></td>
-	<td>
-		<%= show_date(event.start_date, event.end_date) %>
-	</td>
-	<td>
-		<%= show_time(event.start_time, event.end_time) %>
-	</td>
-	<td>
-		&nbsp;
-	</td>
-  <% if can? :modify, event %>
-    	<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_event_path(event) %></td>
-		<td><%= button_to "Delete", event, :method => :delete, :class => :destroy, :confirm => "Are you sure?" %></td>
-	<% end %>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<h2>Past Events</h2>
-<table class="datagrid">
-  <thead class="datagrid">
-    <th>Name</th>
-    <th>Photos</th>
-  <% if can? :modify, Event %>
-	    <th></th>
-	    <th></th>
-	<% end %>
-  </thead>
-
-<% @past_events.each do |event| %>
-  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
-    <td><%= link_to event.name, event %></td>
-    <td>&nbsp;</td>
-  </tr>
-<% end %>
-</table>
-
-<% if can? :create, Event %>
-	<%= link_to 'New Event', new_event_path %>
-<% end %>
+<div id="events-header"><h1 class="title">Listing events</h1> <% if can? :create, Event %><h3 class="title">(<%= link_to 'New Event', new_event_path %>)</h3><% end %></div>
+<hr />
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Table View</a></li>
+		<li><a href="#tabs-2">Calendar View</a></li>
+	</ul>
+	<div id="tabs-1">		
+		<%= render :partial => 'table_view' %>
+	</div>
+	<div id="tabs-2">
+		<%= render :partial => 'calendar_view' %>
+	</div>
+</div
