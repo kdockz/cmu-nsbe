@@ -10,40 +10,23 @@
 				nsbe@andrew.cmu.edu
 			</td> 
 			<td width="35%" align="center"> 
-				<%= link_to(image_tag("suggestionbox.gif", :id => "suggestion"), contact_path) %>
+				<%= image_tag("suggestionbox.gif", :id => "suggestion") %>
 			</td></tr></table> 
 		</td> 
 	</tr>
 </table>
 <h1>Contact Us</h1>
-<p><em>Fields marked with an * are required</em></p><br />
-<form id="contactForm" method="get" action="">
+<%= form_tag '/send_contact_message', :method => "post" %>
+ <form method="post" action="mailto:cmu.nsbe.telecoms@gmail.com" enctype="text/plain">
 
-	<label for="fname">First Name:*</label>
-	<input id="fname" name="fname" size="25" class="required" minlength="1" />
-	<br />
-	<br />
+    <p> Your name (required): <br />
+    <INPUT TYPE=text NAME=name VALUE="" SIZE=40></p>
 
-	<label for="lname">Last Name:*</label>
-	<input id="lname" name="lname" size="45" class="required" minlength="1" />
-	<br />
-	<br /> 
+    <p> Your email: <br />
+    <INPUT TYPE=text NAME=email VALUE="" SIZE=40 MAXLENGTH=20></p>
 
-	<label for="occupation">Title/Occupation:</label>
-	<input id="occupation" name="occupation" /> 
-	<br />
-	<br />
+    <p> Your message:<br />
+    <textarea NAME="Message" ROWS="5" COLS="32"> </textarea></p>
 
-	<label for="email">E-Mail:*</label>
-	<input id="email" name="email" size="25" class="required email" />
-	<br />
-	<br />
-
-	<label for="comment">Comment:</label>
-	<textarea id="comment" name="comment" cols="50" ></textarea>
-	<br />
-	<br />
-
-	<input class="submit" type="submit" value="Submit"/>
-
-</form>
+    <p><INPUT TYPE=submit NAME=Submit VALUE="Send Message"></p>
+  </form>
