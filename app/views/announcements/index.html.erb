@@ -1,15 +1,24 @@
-<h1 id="nav-header">News & Announcements</h1>
-
-
-<table class="datagrid">
+<div id="nav-header">
+	<br />
+	<h1>News & Announcements</h1> 
+	<% if can? :create, Announcement %>
+		<h3 class="title">(<%= link_to 'New Announcement', new_announcement_path %>)</h3>
+	<% end %>
+</div>
+<br />
+<% if !@announcements.empty? %>	
+<div>
+<table class="datagrid" style="text-align: center; margin-left: auto; margin-right: auto">
 	<thead class="datagrid">
-		<th>Content</th>
+		<th>Title</th>
 		<th>Start date</th>
 		<th>End date</th>
-		<th>Active</th>
-		<th></th>
-		<th></th>
-		<th></th>
+		<% if can? :modify, @announcement %>
+			<th>Active</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		<% end %>
 	</thead>
 
 	<% @announcements.each do |announcement| %>
@@ -17,16 +26,18 @@
 		<td><%= link_to announcement.title, announcement %></td>
 		<td><%= announcement.start_date %></td>
 		<td><%= announcement.end_date %></td>
-		<td><%= announcement.active %></td>
-		<td><%= link_to 'Show', announcement %></td>
-		<td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
-		<td><%= button_to "Delete", announcement, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %></td>
-
-	</tr>
+		<% if can? :modify, @announcement %>
+			<td><%= announcement.active %></td>
+			<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_announcement_path(announcement) %></td>
+			<td><%= button_to "Delete", announcement, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %></td>
+		<% end %>
+	</tr
 	<% end %>
 </table>
 
-<br />
-<% if can? :create, Announcement %>
-	<%= link_to 'New Announcement', new_announcement_path %>
+<% else %>
+
+	<p>There are no announcements.</p>
+	
 <% end %>
+</div>

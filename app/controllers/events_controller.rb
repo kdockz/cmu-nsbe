@@ -27,7 +27,7 @@ class EventsController < ApplicationController
     # Store the current event in a session variable for registration purposes.
     @event = Event.find(params[:id])
     session[:event] = @event
-    
+        
     # Find all users registered for a particular event.
     @registered_users = Registration.for_event(@event.id)
     

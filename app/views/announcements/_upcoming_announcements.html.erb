@@ -1,0 +1,20 @@
+<div class="announcement_content">
+<% if !@announcements.empty? %>	
+	<h2>News & Announcements</h2>
+	<table class="datagrid">
+	  <thead class="datagrid">
+		<th>Title:</th>
+	    <th>Date Posted:</th>
+	  </thead>
+
+	<% @announcements.each do |announcement| %>
+	  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+		<td><%= link_to announcement.title, announcement %></td>
+		<td><%= announcement.created_at.strftime("%B %d, %Y") %></td>
+	  </tr>
+	<% end %>
+	</table>
+<% else %>
+	<p>No recent announcements to display.</p>
+<% end %>
+</div>

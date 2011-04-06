@@ -1,3 +1,10 @@
+<script>
+	$(function() {
+		$( "#announcement_start_date" ).datepicker({ dateFormat: 'dd-mm-yy' });
+		$( "#announcement_end_date" ).datepicker({ dateFormat: 'dd-mm-yy' });
+	});
+</script>
+
 <%= form_for(@announcement) do |f| %>
   <% if @announcement.errors.any? %>
     <div id="error_explanation">
@@ -20,15 +27,11 @@
   </div>
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
+    <%= f.text_field :start_date, :onchange => "document.getElementById('announcement_end_date').value = value" %>
   </div>
   <div class="field">
     <%= f.label :end_date %><br />
-    <%= f.date_select :end_date %>
-  </div>
-  <div class="field">
-    <%= f.label :active %><br />
-    <%= f.check_box :active %>
+    <%= f.text_field :end_date %>
   </div>
   <div class="actions">
     <%= f.submit %>

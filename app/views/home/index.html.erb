@@ -29,20 +29,7 @@ $(window).load(function() {
 <table id="home_table">
 	<tr>
 		<td colspan="2">
-				<div class="announcement_content">
-					<h2>News & Announcements</h2>
-					<% if !@announcements.empty? %>
-					<ul>
-						<% for announcement in @announcements %>
-						<li><%= link_to announcement.title, announcement %></li><br />
-						<% end %>
-					</ul>
-					<% else %>
-					<ul>
-						<li>No recent announcements to display.</li>
-					</ul>
-					<% end %>
-				</div>
+			<%= render :partial => 'announcements/upcoming_announcements' %>
 			<div id="slider">
 				<%= image_tag 'slideshow/nsbe1.jpg', :width => 300 %>
 				<%= image_tag 'slideshow/nsbe2.jpg', :width => 300 %>

@@ -292,21 +292,20 @@ h1, h2, h3, h4, h5, h6 {
 	margin-right: auto;
 	text-align: center;
 	background-color: #eeeeee;
-	width: 425px;
-	padding-left: 10px;
-	padding-right: 10px;
+	width: 600px;
 	border: 1px solid #CC6600;
 	margin-top: 5px;
 	margin-bottom: 10px;
 	color: #000;
 }
-.announcement_content ul {
+
+.announcement_content .datagrid {
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 20px;
+	width: 450px;
 	text-align: center;
-	list-style-type: none;
 }
-
 .events_content {
 	margin-left: auto;
 	margin-right: auto;
@@ -398,6 +397,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #000;
 }
 #nav-header h1 {
+	display: inline;
 	color: #000;
 }
 #nav-header .title {

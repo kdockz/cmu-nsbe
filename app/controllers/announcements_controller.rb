@@ -42,7 +42,9 @@ class AnnouncementsController < ApplicationController
   # POST /announcements.xml
   def create
     @announcement = Announcement.new(params[:announcement])
-
+    
+    @announcement.active = true
+    
     respond_to do |format|
       if @announcement.save
         format.html { redirect_to(@announcement, :notice => 'Announcement was successfully created.') }

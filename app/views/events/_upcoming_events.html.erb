@@ -1,22 +1,26 @@
-<h2>Upcoming Events</h2>
-<table class="datagrid">
-  <thead class="datagrid">
-    <th>Name</th>
-    <th>Location</th>
-    <th>Date</th>
-    <th>Time</th>
-  </thead>
+<% if !@upcoming_events.empty? %>	
+	<h2>Upcoming Events</h2>
+	<table class="datagrid">
+	  <thead class="datagrid">
+	    <th>Name</th>
+	    <th>Location</th>
+	    <th>Date</th>
+	    <th>Time</th>
+	  </thead>
 
-<% @upcoming_events.each do |event| %>
-  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
-    <td><%= link_to event.name, event %></td>
-    <td><%= event.location %></td>
-	<td>
-		<%= show_date(event.start_date, event.end_date) %>
-	</td>
-	<td>
-		<%= show_time(event.start_time, event.end_time) %>
-	</td>
-  </tr>
+	<% @upcoming_events.each do |event| %>
+	  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+	    <td><%= link_to event.name, event %></td>
+	    <td><%= event.location %></td>
+		<td>
+			<%= show_date(event.start_date, event.end_date) %>
+		</td>
+		<td>
+			<%= show_time(event.start_time, event.end_time) %>
+		</td>
+	  </tr>
+	<% end %>
+	</table>
+<% else %>
+	<p>No upcoming events to display.</p>
 <% end %>
-</table>

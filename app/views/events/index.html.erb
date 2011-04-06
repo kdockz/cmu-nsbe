@@ -3,11 +3,18 @@ $(function() {
 	$( "#tabs" ).tabs();
 });
 </script>
-
-<% if logged_in? %>
-	<p>See my <%= link_to 'registrations', my_events_path %>.</p>
-<% end %>
-<div id="nav-header"><h1>Events</h1> <% if can? :create, Event %><h3 class="title">(<%= link_to 'New Event', new_event_path %>)</h3><% end %></div>
+<div id="nav-header">
+	<br />
+	<h1>Events</h1> 
+	<% if logged_in? %>
+	<h3 class="title">(
+		<%= link_to "My Registrations", my_events_path %>
+		<% if can? :create, Event %> | 
+			<%= link_to 'New Event', new_event_path %>
+		<% end %>
+		)</h3>
+	<% end %>
+</div>
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Table View</a></li>
