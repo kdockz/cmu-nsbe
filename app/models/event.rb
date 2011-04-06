@@ -15,7 +15,7 @@ class Event < ActiveRecord::Base
   validates :location, :presence => true
   validates :description, :presence => true
   validates :registration, :inclusion => { :in => [true, false] }
-  validates :user_id, :presence => true, :inclusion => { :in => User.all.map{ |u| u.id } }
+  validates :user_id, :inclusion => { :in => User.all.map{ |u| u.id } }
   
   # Scopes
   scope :upcoming, where('start_date >= ?', Date.today)
