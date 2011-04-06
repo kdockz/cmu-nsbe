@@ -1,4 +1,4 @@
-<h1>Listing announcements</h1>
+<h1 id="nav-header">News & Announcements</h1>
 
 
 <table class="datagrid">
@@ -14,7 +14,7 @@
 
 	<% @announcements.each do |announcement| %>
 	<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
-		<td><%= announcement.content %></td>
+		<td><%= link_to announcement.title, announcement %></td>
 		<td><%= announcement.start_date %></td>
 		<td><%= announcement.end_date %></td>
 		<td><%= announcement.active %></td>

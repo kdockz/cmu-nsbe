@@ -7,8 +7,7 @@ $(function() {
 <% if logged_in? %>
 	<p>See my <%= link_to 'registrations', my_events_path %>.</p>
 <% end %>
-<div id="events-header"><h1 class="title">Listing events</h1> <% if can? :create, Event %><h3 class="title">(<%= link_to 'New Event', new_event_path %>)</h3><% end %></div>
-<hr />
+<div id="nav-header"><h1>Events</h1> <% if can? :create, Event %><h3 class="title">(<%= link_to 'New Event', new_event_path %>)</h3><% end %></div>
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Table View</a></li>

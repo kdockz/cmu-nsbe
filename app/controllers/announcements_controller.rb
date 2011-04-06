@@ -1,4 +1,5 @@
 class AnnouncementsController < ApplicationController
+  uses_tiny_mce
   # GET /announcements
   # GET /announcements.xml
   def index

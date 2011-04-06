@@ -9,12 +9,8 @@ class HomeController < ApplicationController
     @users = User.all
   end
 
-  def chapter
-    @zones = Zone.all
-  end
-
   def contact
-
+    @zones = Zone.all
   end
 
   def my_events

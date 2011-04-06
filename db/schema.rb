@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(:version => 20110106112343) do
 
   create_table "announcements", :force => true do |t|
+    t.string   "title"
     t.text     "content"
     t.date     "start_date"
     t.date     "end_date"

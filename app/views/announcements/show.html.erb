@@ -1,18 +1,12 @@
 <p>
   <b>Content:</b>
-  <%= @announcement.content %>
+  <%= raw(@announcement.content) %>
 </p>
 
 <p>
-  <b>Start date:</b>
-  <%= @announcement.start_date %>
+  <b>Date:</b>
+  <%= show_date(@announcement.start_date, @announcement.end_date) %>
 </p>
-
-<p>
-  <b>End date:</b>
-  <%= @announcement.end_date %>
-</p>
-
 <p>
   <b>Active:</b>
   <%= @announcement.active %>

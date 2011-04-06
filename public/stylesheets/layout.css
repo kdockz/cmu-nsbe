@@ -2,12 +2,12 @@ html {
 	background-color: #9a0000;
 }
 body {
-	font-family: Sans-Serif;
+	font-family: Arial, Sans-Serif;
 	font-size: 12px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: sans-serif; 
+	font-family: Arial, Sans-Serif; 
 	color: #666666
 }
 #container {
@@ -290,6 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 .announcement_content {
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 	background-color: #eeeeee;
 	width: 425px;
 	padding-left: 10px;
@@ -299,6 +300,13 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 10px;
 	color: #000;
 }
+.announcement_content ul {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	list-style-type: none;
+}
+
 .events_content {
 	margin-left: auto;
 	margin-right: auto;
@@ -361,10 +369,6 @@ h1, h2, h3, h4, h5, h6 {
 	width: 400px;
 }
 
-#events-header .title {
-	display: inline;
-}
-
 #calendar {
 	margin-left: auto;
 	margin-right: auto;
@@ -386,4 +390,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 #sponsors-listing tr td {
 	padding: 20px;
+}
+#nav-header {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #000;
+}
+#nav-header h1 {
+	color: #000;
+}
+#nav-header .title {
+	display: inline;
+}
+
+#footer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -5,6 +5,7 @@
 	<%= stylesheet_link_tag 'layout', 'jquery-ui-1.8.7.custom', 'datagrid', 'nivo-slider' %>
 	<%= javascript_include_tag 'jquery-1.4.4.min', 'jquery-ui-1.8.7.custom.min', 'application', 'jquery.nivo.slider.pack', 'uservoice' %>
 	<%= csrf_meta_tag %>
+	<%= include_tiny_mce_if_needed %>
 </head>
 <body>
 	<script>
@@ -90,7 +91,6 @@
 					<%= make_link "Home", root_url, "nav/home.png" %>
 					<%= make_link "Events", events_path, "nav/events.png" %>
 					<%= make_link "Directory", directory_path, "nav/directory.png" %>
-					<%= make_link "Chapter", chapter_path, "nav/officers.png" %>
 					<%= make_link "Contact", contact_path, "nav/contact.png" %>
 					<%= make_link "About", about_path, "nav/about.png" %>
 					<%= make_link "News", announcements_path, "nav/announcements.png" %>
@@ -128,7 +128,10 @@
 				</div>
 			</div>
 
-		<div id="footer"></div>
+		<div id="footer">
+			Webmaster: Telecommunications Chair &copy;2011<br />
+			Carnegie Mellon Chapter of the National Society of Black Engineers
+		</div>
 	</div>
 </body>
 </html>

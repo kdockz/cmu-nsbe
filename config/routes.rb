@@ -26,7 +26,6 @@ Nsbe::Application.routes.draw do
   root :to => 'home#index'
   match 'home' => 'home#index', :as => :home
   match 'directory' => 'home#directory', :as => :directory
-  match 'chapter' => 'home#chapter', :as => :chapter
   match 'contact' => 'home#contact', :as => :contact
   match 'about' => 'home#about', :as => :about
   match 'my_events' => 'home#my_events', :as => :my_events

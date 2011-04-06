@@ -34,7 +34,7 @@ $(window).load(function() {
 					<% if !@announcements.empty? %>
 					<ul>
 						<% for announcement in @announcements %>
-						<li><%= announcement.content %></li><br />
+						<li><%= link_to announcement.title, announcement %></li><br />
 						<% end %>
 					</ul>
 					<% else %>

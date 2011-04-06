@@ -1,21 +1,6 @@
-<table>	
-	<tr> 
-		<td align="center"><table width="80%"><tr> 
-			<td width="45%" align="left" style="color: black;"> 
-				<strong>Chapter Address:</strong><br /> 
-				Carnegie Mellon University - NSBE<br /> 
-				4910 Forbes Ave<br /> 
-				Cyert Hall A-64<br /> 
-				Pittsburgh, PA 15213<br /> 
-				nsbe@andrew.cmu.edu
-			</td> 
-			<td width="35%" align="center"> 
-				<%= image_tag("suggestionbox.gif", :id => "suggestion") %>
-			</td></tr></table> 
-		</td> 
-	</tr>
-</table>
-<h1>Contact Us</h1>
+<h1 id="nav-header">Contact Us</h1>
+<%= render :partial => 'executive_board' %>
+
 <%= form_tag '/send_contact_message', :method => "post" %>
  <form method="post" action="mailto:cmu.nsbe.telecoms@gmail.com" enctype="text/plain">
 
