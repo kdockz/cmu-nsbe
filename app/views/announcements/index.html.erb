@@ -11,11 +11,9 @@
 <table class="datagrid" style="text-align: center; margin-left: auto; margin-right: auto">
 	<thead class="datagrid">
 		<th>Title</th>
-		<th>Start date</th>
-		<th>End date</th>
+		<th>Date</th>
 		<% if can? :modify, @announcement %>
 			<th>Active</th>
-			<th></th>
 			<th></th>
 			<th></th>
 		<% end %>
@@ -24,12 +22,13 @@
 	<% @announcements.each do |announcement| %>
 	<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
 		<td><%= link_to announcement.title, announcement %></td>
-		<td><%= announcement.start_date %></td>
-		<td><%= announcement.end_date %></td>
+		<td><%= show_date(announcement.start_date, announcement.end_date) %></td>
 		<% if can? :modify, @announcement %>
 			<td><%= announcement.active %></td>
 			<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_announcement_path(announcement) %></td>
-			<td><%= button_to "Delete", announcement, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" %></td>
+			<td><%= link_to image_tag('trash.gif', :border => 0, :size => "20x20"), announcement, :confirm => 'Are you sure?', :method => :delete  %></td>
+			<!-- Alternative method of deleting. -->
+			<!-- <td><%# button_to "Delete", announcement, :method=>:delete, :class=>:destroy, :confirm=>"Are you sure?" -%></td> -->
 		<% end %>
 	</tr
 	<% end %>

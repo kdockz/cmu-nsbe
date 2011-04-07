@@ -100,47 +100,47 @@ class EventsController < ApplicationController
   # PUT /events/1.xml
   def update
     @event = Event.find(params[:id])
-    
-      # if @event.check_date_and_time
-      # 
-      #   # Authenticate for google session.
-      #   service = GCal4Ruby::Service.new 
-      #   service.authenticate("cmu.nsbe.telecoms", "nsbe2endzone")
-      # 
-      #   # Grab the appropriate calendar- "Events"
-      #   cal = service.calendars[1]
-      # 
-      #   # Create the google event, set its fields, and save it.
-      #   google_events = GCal4Ruby::Event.find(service, { :calendar => cal.id })
-      # 
-      #   google_events.reject!{ |e| e.title != @event.name && e.start_time != Time.parse("#{@event.start_date} at #{@event.start_time}") }
-      # 
-      #   if google_events.empty?
-      #     
-      #       # Create the google event, set its fields, and save it.
-      #       gevent = GCal4Ruby::Event.new(service) 
-      #       gevent.calendar = cal
-      #       gevent.title = @event.name
-      #       gevent.start_time = Time.parse("#{@event.start_date} at #{@event.start_time}")
-      #       gevent.end_time = Time.parse("#{@event.end_date} at #{@event.end_time}")
-      #       gevent.where = @event.location
-      #       gevent.save
-      #       
-      #   else
-      #     
-      #     google_events.each do |e|
-      #         e.title = @event.name
-      #         e.start_time = Time.parse("#{@event.start_date} at #{@event.start_time}")
-      #         e.end_time = Time.parse("#{@event.end_date} at #{@event.end_time}")
-      #         e.where = @event.location
-      #         e.save!
-      #     end
-      #   end
-      # end
       
-
     respond_to do |format|
       if @event.update_attributes(params[:event])
+
+        if @event.check_date_and_time
+
+          # Authenticate for google session.
+          service = GCal4Ruby::Service.new 
+          service.authenticate("cmu.nsbe.telecoms", "nsbe2endzone")
+
+          # Grab the appropriate calendar- "Events"
+          cal = service.calendars[1]
+
+          # Create the google event, set its fields, and save it.
+          google_events = GCal4Ruby::Event.find(service, { :calendar => cal.id })
+
+          google_events.reject!{ |e| e.title != @event.name && e.start_time != Time.parse("#{@event.start_date} at #{@event.start_time}") }
+
+          if google_events.empty?
+
+              # Create the google event, set its fields, and save it.
+              gevent = GCal4Ruby::Event.new(service) 
+              gevent.calendar = cal
+              gevent.title = @event.name
+              gevent.start_time = Time.parse("#{@event.start_date} at #{@event.start_time}")
+              gevent.end_time = Time.parse("#{@event.end_date} at #{@event.end_time}")
+              gevent.where = @event.location
+              gevent.save
+
+          else
+            if google_events.size == 1
+              e = google_events[0]
+              e.title = @event.name
+              e.start_time = Time.parse("#{@event.start_date} at #{@event.start_time}")
+              e.end_time = Time.parse("#{@event.end_date} at #{@event.end_time}")
+              e.where = @event.location
+              e.save
+            end
+          end
+        end
+        
         format.html { redirect_to(@event, :notice => 'Event was successfully updated.') }
         format.xml  { head :ok }
       else

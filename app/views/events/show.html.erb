@@ -67,7 +67,7 @@
 			<% else %>
 			<p><%= button_to "Register", { :controller => 'registrations', :action => 'create' } %></p>
 			<% end %>
-			<% if can? :modify, Event %>
+			<% if can? :modify, @event %>
 				<%= link_to 'Edit', edit_event_path(@event) %> |
 				<%= link_to 'Back', events_path %>
 			<% end %>

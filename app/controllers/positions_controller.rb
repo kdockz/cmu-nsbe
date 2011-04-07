@@ -1,4 +1,5 @@
 class PositionsController < ApplicationController
+  uses_tiny_mce
   # GET /positions
   # GET /positions.xml
   def index

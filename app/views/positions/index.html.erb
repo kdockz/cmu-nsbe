@@ -3,19 +3,20 @@
 <table class="datagrid">
 	<thead class="datagrid">
 		<th>Name</th>
-		<th>Description</th>
-		<th></th>
-		<th></th>
-		<th></th>
+		<% if can? :modify, Position %>
+			<th></th>
+			<th></th>
+		<% end %>
 	</thead>
 
 	<% @positions.each do |position| %>
 	<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
-		<td><%= position.name %></td>
-		<td><%= position.description %></td>
-		<td><%= link_to 'Show', position %></td>
-		<td><%= link_to 'Edit', edit_position_path(position) %></td>
-		<td><%= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete %></td>
+		<td><%= link_to position.name, position %></td>
+		<% if can? :modify, position %>
+			<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_position_path(position) %></td>
+			<td><%= link_to image_tag('trash.gif', :border => 0, :size => "20x20"), position, :confirm => 'Are you sure?', :method => :delete  %></td>
+			
+		<% end %>
 	</tr>
 	<% end %>
 </table>

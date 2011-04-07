@@ -19,3 +19,4 @@ gem "gcal4ruby"
 gem "validates_timeliness"
 gem "simplecov"
 gem "tiny_mce"
+gem 'jquery-rails', '>= 0.2.6'

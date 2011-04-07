@@ -7,11 +7,14 @@
   <b>Date:</b>
   <%= show_date(@announcement.start_date, @announcement.end_date) %>
 </p>
+<% if can? :modify, @announcement %>
 <p>
   <b>Active:</b>
   <%= @announcement.active %>
 </p>
+<% end %>
+<%= link_to 'Back', :back %>
 
-
-<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
-<%= link_to 'Back', announcements_path %>
+<% if can? :modify, @announcement %>
+	<%= link_to 'Edit', edit_announcement_path(@announcement) %>
+<% end %>
