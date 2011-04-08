@@ -1,0 +1,58 @@
+<h1>Edit User</h1>
+
+<% form_for(@user, :html => { :multipart => true }) do |f| %>
+
+<% if @user.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@user.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+	<ul>
+		<% @user.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<div class="field">
+	<%= f.label :email %><br />
+	<%= f.text_field :email %>
+</div>
+<div class="field">
+	<%= f.label :first_name %><br />
+	<%= f.text_field :first_name %>
+</div>
+<div class="field">
+	<%= f.label :last_name %><br />
+	<%= f.text_field :last_name %>
+</div>
+<div class="field">
+	<%= f.label :major %><br />
+	<%= f.select :major, User::MAJORS, :prompt => "What major?" %>
+</div>
+<div class="field">
+	<%= f.label :class_level %><br />
+	<%= f.select :class_level, User::CLASS_LEVELS, :prompt => "What year?" %>
+</div>
+<div class="field">
+	<table style="margin-top: 10px; margin-bottom: 10px">
+		<tr> 
+			<td>
+				Current Photo:
+				<br />
+				<%= image_tag @user.photo.url(:medium) %>
+			</td>
+			<td style="padding: 10px">
+				OR:
+			</td>
+			<td>
+				Set <%= f.label :photo %>:<br />
+				<%= f.file_field :photo %>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="actions">
+	<%= f.submit "Update" %>
+</div>
+<% end %>

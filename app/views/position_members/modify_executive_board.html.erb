@@ -1,0 +1,43 @@
+<table>
+	<tr>
+		<td>
+			<table class="datagrid">
+				<thead class="datagrid">
+					<th>Position</th>
+					<th>User</th>
+				</thead>
+				<%= form_for save_executive_board_path, :url => { :action => "save_executive_board" } do %>
+				<% for e in @eboard %> 
+				<%= fields_for "eboard[]", e do |f| %>   
+				<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+					<td><%= e.position.name %></td>
+					<td><%= f.collection_select :user_id, User.all, :id, :nice_name %></td>
+				</tr>
+				<% end %>  
+				<% end %>
+			</table>
+		</td>
+		<td>
+			<h2 style="margin-left: auto; margin-right: auto; text-align: center;">Vacant Positions:</h2>
+			<table class="datagrid">
+				<thead class="datagrid">
+					<th>Position</th>
+					<th>User</th>
+				</thead>
+				<% for p in @positions %>
+				<%= fields_for "new_eboard[]", @new_eboard_member = PositionMember.new do |f| %>   
+				<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+					<td><%= p.name %><% @new_eboard_member.position_id = p.id  %><%= f.hidden_field :position_id %></td>
+					<td><%= f.collection_select :user_id, User.all, :id, :nice_name, :prompt => "Please select a member.", :include_blank => true %></td>
+				</tr>
+				<% end %>
+				<% end %>
+
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="margin-left: auto; margin-right: auto; text-align: center"><%= submit_tag "Save Changes" %></td>
+	</tr>
+	<% end %>
+</table>
