@@ -46,7 +46,7 @@
 							</tr> 
 							<% @positions = Position.by_zone(z.id) %>
 							<% @positions.each do |p| %>
-							<% @members = PositionMember.by_position(p.id).active %>
+							<% @members = PositionMember.by_position(p.id).current %>
 							<% @members.each do |m| %>
 							<tr class="members"> 
 								<td><%= link_to(m.position.name, position_path(m.position)) %></td> 

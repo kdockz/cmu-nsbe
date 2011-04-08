@@ -12,6 +12,8 @@ class HomeController < ApplicationController
   def contact
     @zones = Zone.all
   end
+  def administration
+  end
 
   def my_events
     @registrations = Registration.where(:user_id => current_user.id)

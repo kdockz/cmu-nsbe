@@ -13,7 +13,7 @@ class CreateEvents < ActiveRecord::Migration
       t.boolean :registration
       t.integer :status
       t.boolean :active
-
+      t.string :url
       t.timestamps
     end
   end

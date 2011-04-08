@@ -36,6 +36,37 @@ class PositionMembersController < ApplicationController
   def edit
     @position_member = PositionMember.find(params[:id])
   end
+  
+  def modify_executive_board
+    @positions = Position.eboard
+    @eboard = PositionMember.eboard
+  end
+  
+  def save_executive_board
+    
+    #Modifies an existing executive board member.
+    for member in params[:eboard]
+      @pm = PositionMember.find(member[0])
+      unless @pm.nil?
+        @pm.user_id = member[1][:user_id]
+        @pm.save!
+      end
+      
+    end
+    
+    # Creates an executive board member, if a user_id is specified.
+    for member in params[:new_eboard]
+      unless member[:user_id].nil? || member[:user_id].empty?
+        @pm = PositionMember.new
+        @pm.position_id = member[:position_id]
+        @pm.user_id = member[:user_id]
+        @pm.active = true
+        @pm.save
+      end
+    end
+    
+    redirect_to administration_path
+  end
 
   # POST /position_members
   # POST /position_members.xml

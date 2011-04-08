@@ -83,6 +83,33 @@ namespace :db do
 
     end
 
+    # Step 4: Setup default events.
+    # Read the events file and store it in an array.
+    events = Array.new  
+    events_file = File.open("#{RAILS_ROOT}/lib/tasks/events.txt")
+    events_file.each_line { |line| events << line.chomp }
+    creator = User.find(:first, :conditions => ['login = ?', 'karl'])
+
+    # Create all the Positions.
+    events.each do |event| 
+
+      # split the member information by colons.
+      event_details = event.split(':')
+
+      #Create the member
+      e = Event.new
+      e.name = event_details[0]
+      e.location = event_details[1]
+      e.start_date = event_details[2]
+      e.end_date = event_details[3]
+      e.start_time = event_details[4]
+      e.end_time = event_details[5]
+      e.description = event_details[6]
+      e.active = true
+      e.registration = true
+      e.user_id = creator.id
+      e.save!
+    end
 
   end
 end

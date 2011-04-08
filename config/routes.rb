@@ -17,6 +17,11 @@ Nsbe::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'my_account' => 'users#my_account', :as => :my_account
   match 'show_profile/:id' => 'users#show_profile', :as => :show_profile, :id => nil
+  match 'edit/user_profile/:id' => 'users#edit_profile', :as => :edit_user, :id => nil
+  match 'modify_executive_board' => 'position_members#modify_executive_board', :as => :modify_executive_board
+  match 'save_executive_board' => 'position_members#save_executive_board', :as => :save_executive_board
+
+  
   match 'edit/my_account' => 'users#edit', :as => :edit_my_account
   match 'change_password' => 'users#change_password', :as => :change_password
   match 'reset_password' => 'users#reset_password', :as => :reset_password
@@ -28,6 +33,7 @@ Nsbe::Application.routes.draw do
   match 'directory' => 'home#directory', :as => :directory
   match 'contact' => 'home#contact', :as => :contact
   match 'about' => 'home#about', :as => :about
+  match 'administration' => 'home#administration', :as => :administration
   match 'my_events' => 'home#my_events', :as => :my_events
 
   # The priority is based upon order of creation:

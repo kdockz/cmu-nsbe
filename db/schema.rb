@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.boolean  "registration"
     t.integer  "status"
     t.boolean  "active"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.string   "name"
     t.string   "email"
     t.text     "description"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -92,6 +94,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
 
   create_table "zones", :force => true do |t|
     t.string   "name"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

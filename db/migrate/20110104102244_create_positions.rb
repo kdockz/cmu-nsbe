@@ -5,7 +5,7 @@ class CreatePositions < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.text :description
-
+      t.boolean :active
       t.timestamps
     end
   end

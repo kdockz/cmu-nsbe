@@ -8,14 +8,14 @@ class Event < ActiveRecord::Base
   belongs_to :user
   
   # Array
-  STATUS = [['Upcoming', 0], ['Ongoing', 1], ['Complete', 2]]
+  # STATUS = [['Upcoming', 0], ['Ongoing', 1], ['Complete', 2]]
     
   # Validations
   validates :name, :presence => true
   validates :location, :presence => true
   validates :description, :presence => true
   validates :registration, :inclusion => { :in => [true, false] }
-  validates :user_id, :inclusion => { :in => User.all.map{ |u| u.id } }
+  # validates :user_id, :inclusion => { :in => User.all.map{ |u| u.id } }
   
   # Scopes
   scope :upcoming, where('start_date >= ?', Date.today)
