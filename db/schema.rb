@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.text     "content"
     t.date     "start_date"
     t.date     "end_date"
-    t.boolean  "active"
+    t.boolean  "active",     :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.integer  "capacity"
     t.boolean  "registration"
     t.integer  "status"
-    t.boolean  "active"
+    t.boolean  "active",       :default => true
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.integer  "user_id"
     t.integer  "start_year"
     t.integer  "end_year"
-    t.boolean  "active"
+    t.boolean  "active",      :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.string   "name"
     t.string   "email"
     t.text     "description"
-    t.boolean  "active"
+    t.boolean  "active",      :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
     t.string   "phone_number"
     t.integer  "class_level"
     t.integer  "major"
-    t.boolean  "active"
+    t.boolean  "active",                                   :default => true
     t.text     "biography"
     t.integer  "access_level",                             :default => 10
     t.string   "crypted_password",          :limit => 40
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(:version => 20110106112343) do
 
   create_table "zones", :force => true do |t|
     t.string   "name"
-    t.boolean  "active"
+    t.boolean  "active",     :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

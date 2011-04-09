@@ -20,9 +20,9 @@ $(function() {
 				<h2>
 					Member Contact Information 
 					<% if can?(:modify, user) && user == current_user %>
-						<%= link_to(image_tag('edit.png', :border => 0, :size => "15x15"), edit_my_account_path) %>			
+						<%= link_to(image_tag('icons/edit.png', :border => 0, :size => "15x15"), edit_my_account_path) %>			
 					<% elsif can?(:modify, user) %>
-						<%= link_to(image_tag('edit.png', :border => 0, :size => "15x15"), edit_user_path(user.id)) %>
+						<%= link_to(image_tag('icons/edit.png', :border => 0, :size => "15x15"), edit_user_path(user.id)) %>
 					<% end %>
 				</h2>
 				</td>

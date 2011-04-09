@@ -1,3 +1,26 @@
-<%= link_to "Modify Executive Board Positions", positions_path %>
-<br />
-<%= link_to "Modify Current Executive Board", modify_executive_board_path %>
+<h1>Administration Controls</h1>
+
+<table>
+	<tr>
+		<td>
+		<h3><%= image_tag "icons/new_position.png", :border => 0, :class => "title_image" %>&nbsp;<%= link_to "Create a New Board Position", new_position_path %></h3>
+		</td>
+		<td>
+		<h3><%= image_tag "icons/edit_position.png", :border => 0, :class => "title_image" %>&nbsp;<%= link_to "Modify Executive Board Positions", positions_path %></h3>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h3><%= image_tag "icons/new_eboard.png", :size => "32x32", :border => 0, :class => "title_image" %>&nbsp;<%= link_to "Setup a New Executive Board", new_executive_board_path %></h3>
+		</td>
+		<td>
+			<h3><%= image_tag "icons/edit_eboard.png", :size => "32x32", :border => 0, :class => "title_image" %>&nbsp;<%= link_to "Modify Current Executive Board", modify_executive_board_path %></h3>
+			
+		</td>
+	</tr>
+	<tr>
+		<td>
+<h3><%= image_tag "icons/notice_board.png", :size => "32x32", :border => 0, :class => "title_image" %>&nbsp;<%= link_to "Create a News Announcement", new_announcement_path %></h3>
+		</td>
+	</tr>
+</table>

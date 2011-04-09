@@ -12,7 +12,7 @@ class CreateEvents < ActiveRecord::Migration
       t.integer :capacity
       t.boolean :registration
       t.integer :status
-      t.boolean :active
+      t.boolean :active, :default => true
       t.string :url
       t.timestamps
     end

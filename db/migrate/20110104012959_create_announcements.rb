@@ -5,7 +5,7 @@ class CreateAnnouncements < ActiveRecord::Migration
       t.text :content
       t.date :start_date
       t.date :end_date
-      t.boolean :active
+      t.boolean :active, :default => true
 
       t.timestamps
     end

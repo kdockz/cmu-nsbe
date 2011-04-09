@@ -18,5 +18,19 @@ class HomeController < ApplicationController
   def my_events
     @registrations = Registration.where(:user_id => current_user.id)
   end
+  
+  def send_contact_message
+    eboard = PositionMember.eboard
+    
+    for position in eboard
+      user = User.where(:id => position.user_id)
+      if user[0].admin?
+        PostOffice.contact_message(user[0], params[:name], params[:email], params[:message]).deliver
+      end
+    end
+    
+    
+    redirect_to home_path
+  end
 
 end

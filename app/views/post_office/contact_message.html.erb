@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Someone wants to contact CMU NSBE.</h1>
+    <p>
+		Dear <%= @user.first_name %>,<br /><br />
+    	The following is a message from <%= @name %>, a person who is trying to contact our NSBE Chapter:
+	</p>
+	<br />
+    <p><%= @message %></p>
+
+	<% unless @email.nil? %>
+		<p>They provided their email: <%= @email %></p>
+	<% else %>
+		<p>They did not provide a contact email.</p>
+	<% end %>
+  </body>
+</html>

@@ -55,6 +55,8 @@ class User < ActiveRecord::Base
 
   # Scopes
   scope :all, :order => "last_name, first_name"
+  scope :admin, where(:access_level => 50)
+
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
@@ -123,7 +125,7 @@ class User < ActiveRecord::Base
      return false
    end
   end
-
+  
   def eboard_member?
     if access_level == 30 then
       return true

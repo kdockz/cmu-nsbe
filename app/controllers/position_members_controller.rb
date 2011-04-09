@@ -37,12 +37,54 @@ class PositionMembersController < ApplicationController
     @position_member = PositionMember.find(params[:id])
   end
   
+  def new_executive_board
+    @eboard_positions = Position.eboard
+  end
   def modify_executive_board
-    @positions = Position.eboard
+    @vacant_positions=Position.current.all
+    @positions= @vacant_positions.dup
+    for position in @positions
+      past_officers = PositionMember.by_position(position.id)
+      if !past_officers.nil? || !past_officers.empty?
+        past_officers.each do |officer|  
+          if officer.active == true
+            @vacant_positions.delete(position)
+            break
+          end
+        end
+      end
+    end
     @eboard = PositionMember.eboard
   end
-  
   def save_executive_board
+    current_eboard = PositionMember.eboard.all
+    
+    # Creates an executive board member, if a user_id is specified.
+    for member in params[:eboard]
+      unless member[:user_id].nil? || member[:user_id].empty?
+        current_officeholder = PositionMember.eboard.where(:position_id => member[:position_id])[0]
+        unless current_officeholder.nil?
+          current_officeholder.active = false
+          current_officeholder.save!
+          current_eboard.delete(current_officeholder)
+        end      
+        @pm = PositionMember.new
+        @pm.position_id = member[:position_id]
+        @pm.user_id = member[:user_id]
+        @pm.active = true
+        @pm.save
+      end
+      
+      for old_member in current_eboard 
+        old_member.active = false
+        old_member.save!
+      end
+    end
+    
+    redirect_to administration_path
+  end
+  
+  def update_executive_board
     
     #Modifies an existing executive board member.
     for member in params[:eboard]

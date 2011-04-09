@@ -1,6 +1,6 @@
 <div class="announcement_content">
 <% if !@announcements.empty? %>	
-	<h2>News & Announcements</h2>
+	<h2><%= link_to image_tag('icons/bulletin_board.png', :border => 0, :class => 'title_image'), announcements_path %>&nbsp;&nbsp;News & Announcements</h2>
 	<table class="datagrid">
 	  <thead class="datagrid">
 		<th>Title:</th>
@@ -15,6 +15,6 @@
 	<% end %>
 	</table>
 <% else %>
-	<p>No recent announcements to display.</p>
+	<p><em>No recent announcements to display.</em></p>
 <% end %>
 </div>

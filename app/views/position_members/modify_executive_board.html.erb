@@ -6,7 +6,7 @@
 					<th>Position</th>
 					<th>User</th>
 				</thead>
-				<%= form_for save_executive_board_path, :url => { :action => "save_executive_board" } do %>
+				<%= form_tag :action => "update_executive_board" do %>
 				<% for e in @eboard %> 
 				<%= fields_for "eboard[]", e do |f| %>   
 				<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
@@ -24,7 +24,7 @@
 					<th>Position</th>
 					<th>User</th>
 				</thead>
-				<% for p in @positions %>
+				<% for p in @vacant_positions %>
 				<%= fields_for "new_eboard[]", @new_eboard_member = PositionMember.new do |f| %>   
 				<tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
 					<td><%= p.name %><% @new_eboard_member.position_id = p.id  %><%= f.hidden_field :position_id %></td>

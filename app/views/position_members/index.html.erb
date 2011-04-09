@@ -14,8 +14,8 @@
 		<td><%= link_to position_member.position.name, position_member.position %></td>
 		<td><%= link_to position_member.user.nice_name, show_profile_path(position_member.user.id) %></td>
 		<td><%= position_member.active %></td>
-		<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_position_member_path(position_member) %></td>
-		<td><%= link_to image_tag('trash.gif', :border => 0, :size => "20x20"), position_member, :confirm => 'Are you sure?', :method => :delete  %></td>
+		<td><%= link_to image_tag('icons/edit.png', :border => 0, :size => "20x20"), edit_position_member_path(position_member) %></td>
+		<td><%= link_to image_tag('icons/trash.gif', :border => 0, :size => "20x20"), position_member, :confirm => 'Are you sure?', :method => :delete  %></td>
 	</tr>
 	<% end %>
 </table>

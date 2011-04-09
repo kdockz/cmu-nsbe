@@ -40,6 +40,7 @@ namespace :db do
       zone = Zone.find(:first, :conditions => ['name = ?', pos[1]])
       p.zone_id = zone.id
       p.email = pos[2]
+      p.active = true
       p.save!
     end
 

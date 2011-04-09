@@ -18,7 +18,7 @@
 									nsbe@andrew.cmu.edu
 								</td> 
 								<td width="35%" align="center"> 
-									<%= image_tag("suggestionbox.gif", :id => "suggestion") %>
+									<%= link_to image_tag("suggestionbox.gif", :id => "suggestion"), "#contact_us" %>
 								</td>
 							</tr>
 						</table> 
@@ -44,17 +44,25 @@
 							<tr class="zones"> 
 								<td colspan="3"><%= z.name %></td> 
 							</tr> 
-							<% @positions = Position.by_zone(z.id) %>
-							<% @positions.each do |p| %>
-							<% @members = PositionMember.by_position(p.id).current %>
-							<% @members.each do |m| %>
-							<tr class="members"> 
-								<td><%= link_to(m.position.name, position_path(m.position)) %></td> 
-								<td><%= link_to(m.user.nice_name, show_profile_path(m.user.id)) %></td> 
-								<td><%= m.position.email %></td> 
-							</tr> 
-							<% end %>
-							<% end %>
+							<% @positions = Position.current.by_zone(z.id) %>
+								<% @positions.each do |p| %>
+									<% @members = PositionMember.eboard.by_position(p.id) %>
+									<% if @members.empty? %>
+									<tr class="members"> 
+										<td><%= link_to(p.name, position_path(p)) %></td> 
+										<td><em>Vacant</em></td> 
+										<td>&nbsp;</td> 
+									</tr>
+									<% else %>
+										<% @members.each do |m| %>
+										<tr class="members"> 
+											<td><%= link_to(m.position.name, position_path(m.position)) %></td> 
+											<td><%= link_to(raw("<strong>#{m.user.nice_name}</strong>"), show_profile_path(m.user.id)) %></td> 
+											<td><%= m.position.email %></td> 
+										</tr>
+										<% end %>
+									<% end %>
+								<% end %>
 							<% end %>
 						</table> 
 					</td> 

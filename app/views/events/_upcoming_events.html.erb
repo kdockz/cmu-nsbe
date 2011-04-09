@@ -1,5 +1,5 @@
 <% if !@upcoming_events.empty? %>	
-	<h2>Upcoming Events</h2>
+	<h2><%= link_to image_tag('icons/events_icon.png', :border => 0, :class => 'title_image'), events_path %>&nbsp;&nbsp;Upcoming Events</h2>
 	<table class="datagrid">
 	  <thead class="datagrid">
 	    <th>Name</th>
@@ -22,5 +22,5 @@
 	<% end %>
 	</table>
 <% else %>
-	<p>No upcoming events to display.</p>
+	<p><em>No upcoming events to display.</em></p>
 <% end %>

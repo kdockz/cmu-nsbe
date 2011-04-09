@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.column :phone_number,              :string
       t.column :class_level,               :integer
       t.column :major,                     :integer
-      t.column :active,                    :boolean
+      t.column :active,                    :boolean, :default => true
       t.column :biography,                 :text
       t.column :access_level,              :integer, :default => 10
       t.column :crypted_password,          :string, :limit => 40

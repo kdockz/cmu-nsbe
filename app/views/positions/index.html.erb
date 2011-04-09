@@ -17,8 +17,8 @@
 		<td><%= link_to position.zone.name, position.zone %></td>
 		
 		<% if can? :modify, position %>
-			<td><%= link_to image_tag('edit.png', :border => 0, :size => "20x20"), edit_position_path(position) %></td>
-			<td><%= link_to image_tag('trash.gif', :border => 0, :size => "20x20"), position, :confirm => 'Are you sure?', :method => :delete  %></td>
+			<td><%= link_to image_tag('icons/edit.png', :border => 0, :size => "20x20"), edit_position_path(position) %></td>
+			<td><%= link_to image_tag('icons/trash.gif', :border => 0, :size => "20x20"), position, :confirm => 'Are you sure?', :method => :delete  %></td>
 			
 		<% end %>
 	</tr>

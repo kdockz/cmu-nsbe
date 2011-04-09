@@ -5,7 +5,7 @@ class CreatePositionMembers < ActiveRecord::Migration
       t.integer :user_id
       t.integer :start_year
       t.integer :end_year
-      t.boolean :active
+      t.boolean :active, :default => true
 
       t.timestamps
     end

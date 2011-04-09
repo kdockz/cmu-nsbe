@@ -1,17 +1,37 @@
+<script>
+$(function() {
+	$('#suggestion').animate({ 
+		scrollTop: $('#contact_us').offset().top 
+		}, 3000);
+	});
+</script>
 <h1 id="nav-header">Contact Us</h1>
 <%= render :partial => 'executive_board' %>
 
-<%= form_tag '/send_contact_message', :method => "post" %>
- <form method="post" action="mailto:cmu.nsbe.telecoms@gmail.com" enctype="text/plain">
 
-    <p> Your name (required): <br />
-    <INPUT TYPE=text NAME=name VALUE="" SIZE=40></p>
-
-    <p> Your email: <br />
-    <INPUT TYPE=text NAME=email VALUE="" SIZE=40 MAXLENGTH=20></p>
-
-    <p> Your message:<br />
-    <textarea NAME="Message" ROWS="5" COLS="32"> </textarea></p>
-
-    <p><INPUT TYPE=submit NAME=Submit VALUE="Send Message"></p>
-  </form>
+<div id="contact_us" style="margin-left: auto; margin-right: auto; text-align: center;">
+	<h1>Send Us A Message:</h1>
+<%= form_tag :action => 'send_contact_message', :method => "post" do %>
+<table style="margin-left: auto; margin-right: auto; text-align: center;" cellspacing="30">
+	<tr>
+		<td>
+			<%= label_tag "Your name (required):" %><br />
+			<%= text_field_tag "name" %>
+		</td>
+		<td rowspan="2">
+			<%= label_tag "Your message:" %><br />
+			<%= text_area_tag "message" %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= label_tag "Your email:" %><br />
+			<%= text_field_tag "email" %>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><%= submit_tag "Send Message" %></td>
+	</tr>
+</table>
+<% end %>
+</div>
